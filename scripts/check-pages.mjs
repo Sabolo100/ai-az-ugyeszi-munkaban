@@ -16,6 +16,11 @@ async function walk(dir) {
   return files;
 }
 const files = await walk(output);
+const stylesheetFiles = files.filter((f) => f.endsWith('.css'));
+assert.ok(stylesheetFiles.length > 0, 'stylesheets exported');
+const styles = (await Promise.all(stylesheetFiles.map((f) => readFile(f, 'utf8')))).join('\n');
+assert.doesNotMatch(styles, /@tailwind\s+utilities|@theme\s/, 'Tailwind must be compiled');
+assert.match(styles, /\.inline-flex\s*\{/, 'shared component utilities compiled');
 let pages = 0;
 const checked = new Set();
 for (const file of files.filter((f) => f.endsWith('index.html'))) {

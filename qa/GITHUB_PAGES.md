@@ -3,14 +3,18 @@
 A felhasználó kérésére a korábbi helyi változat GitHub Pages-kiadást kapott.
 
 - Forrás: `Sabolo100/ai-az-ugyeszi-munkaban`, `main` ág.
-- Tervezett cím: https://sabolo100.github.io/ai-az-ugyeszi-munkaban/
+- Nyilvános cím: https://sabolo100.github.io/ai-az-ugyeszi-munkaban/
 - A Pages-kiadás natív Next.js statikus export, a korábbi Vinext/Worker build megmaradt.
 - `npm run build:pages`: sikeres, 31 tartalmi oldal exportálva.
-- `npm run check:pages`: 31 oldal, 15 örökölt cím, 49 helyi hivatkozási cél,
+- `npm run check:pages`: 31 oldal, 15 örökölt cím, 48 helyi hivatkozási cél,
   a repó útvonalelőtagja, nyilvános metaadatok és a 404-oldal ellenőrizve.
 - `npm run lint` és `npm run typecheck`: sikeres.
 - Beépített Chromium böngésző: a statikus előnézeten a szerződésfül aktiválása
   és a főoldalról a mintaugyre történő kliensoldali navigáció sikeres.
+- A harmadik állomás munkalapjának URL-paraméterei közvetlen újratöltéskor
+  visszaállnak; a böngésző konzoljában nem jelentkezett hiba.
+- A Tailwind stílusok a Next.js Pages-buildben is lefordulnak; a csomagellenőrzés
+  elutasítja a lefordítatlan Tailwind-direktívákat és a hiányzó komponensstílusokat.
 - A teljes repo helyett kizárólag az `out` könyvtár kerül a Pages-re.
   A repo nem tartalmaz node_modules-t, helyi környezeti fájlt, build-gyorsítótárat
   vagy hozzáférési kulcsot. A forrásokban végzett kulcsminta-keresés nem talált kulcsot.
