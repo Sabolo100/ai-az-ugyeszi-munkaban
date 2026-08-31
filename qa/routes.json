@@ -1,0 +1,178 @@
+{
+  "date": "2026-08-30T14:59:24.627Z",
+  "origin": "http://127.0.0.1:8787",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200
+    },
+    {
+      "route": "/feladatok",
+      "status": 200
+    },
+    {
+      "route": "/modszerek",
+      "status": 200
+    },
+    {
+      "route": "/eszkozok",
+      "status": 200
+    },
+    {
+      "route": "/eszkozok/intezmenyi-peldak",
+      "status": 200
+    },
+    {
+      "route": "/mintaugy",
+      "status": 200
+    },
+    {
+      "route": "/indulas",
+      "status": 200
+    },
+    {
+      "route": "/hatter",
+      "status": 200
+    },
+    {
+      "route": "/hatter/folyamat-es-ido",
+      "status": 200
+    },
+    {
+      "route": "/hatter/tenyallasok",
+      "status": 200
+    },
+    {
+      "route": "/hatter/biztonsagos-hasznalat",
+      "status": 200
+    },
+    {
+      "route": "/tanulmany",
+      "status": 200
+    },
+    {
+      "route": "/forrasok",
+      "status": 200
+    },
+    {
+      "route": "/feladatok/emailek",
+      "status": 200
+    },
+    {
+      "route": "/feladatok/szerzodesek",
+      "status": 200
+    },
+    {
+      "route": "/feladatok/hanganyagok",
+      "status": 200
+    },
+    {
+      "route": "/feladatok/vallomasok",
+      "status": 200
+    },
+    {
+      "route": "/feladatok/belso-iratok",
+      "status": 200
+    },
+    {
+      "route": "/feladatok/penzmozgasok",
+      "status": 200
+    },
+    {
+      "route": "/feladatok/jogi-kutatas",
+      "status": 200
+    },
+    {
+      "route": "/feladatok/ugyirat",
+      "status": 200
+    },
+    {
+      "route": "/modszerek/promptolas",
+      "status": 200
+    },
+    {
+      "route": "/modszerek/sajat-alkalmazas",
+      "status": 200
+    },
+    {
+      "route": "/modszerek/agentek",
+      "status": 200
+    },
+    {
+      "route": "/modszerek/kesz-rendszerek",
+      "status": 200
+    },
+    {
+      "route": "/tanulmany/vezetoi-attekintes",
+      "status": 200
+    },
+    {
+      "route": "/tanulmany/jogi-keret-es-munkafolyamat",
+      "status": 200
+    },
+    {
+      "route": "/tanulmany/tenyallasok-es-bizonyitasi-terv",
+      "status": 200
+    },
+    {
+      "route": "/tanulmany/ai-eszkozok-es-biztonsagos-hasznalat",
+      "status": 200
+    },
+    {
+      "route": "/tanulmany/bevezetes-meres-es-dontesi-terv",
+      "status": 200
+    },
+    {
+      "route": "/tanulmany/forrasjegyzek-es-kutatasi-korlatok",
+      "status": 200
+    },
+    {
+      "route": "/tudastar",
+      "status": 307,
+      "redirect": "/hatter"
+    },
+    {
+      "route": "/tudastar/ugyeszi-munka",
+      "status": 307,
+      "redirect": "/hatter/folyamat-es-ido"
+    },
+    {
+      "route": "/tudastar/idoveszteseg-es-gyorsitas",
+      "status": 307,
+      "redirect": "/hatter/folyamat-es-ido"
+    },
+    {
+      "route": "/tudastar/tenyek-es-bizonyitas",
+      "status": 307,
+      "redirect": "/hatter/tenyallasok"
+    },
+    {
+      "route": "/tudastar/ai-a-gyakorlatban",
+      "status": 307,
+      "redirect": "/tanulmany/ai-eszkozok-es-biztonsagos-hasznalat"
+    },
+    {
+      "route": "/tudastar/eszkozok-es-beszerzes",
+      "status": 307,
+      "redirect": "/tanulmany/bevezetes-meres-es-dontesi-terv"
+    },
+    {
+      "route": "/tudastar/jogi-es-adatvedelmi-garanciak",
+      "status": 307,
+      "redirect": "/hatter/biztonsagos-hasznalat"
+    },
+    {
+      "route": "/tudastar/kilencven-napos-proba",
+      "status": 307,
+      "redirect": "/tanulmany/bevezetes-meres-es-dontesi-terv"
+    },
+    {
+      "route": "/tudastar/mintaugy",
+      "status": 307,
+      "redirect": "/mintaugy"
+    }
+  ],
+  "checkedInternalLinks": 44,
+  "missingRouteStatus": 404,
+  "references": 11
+}

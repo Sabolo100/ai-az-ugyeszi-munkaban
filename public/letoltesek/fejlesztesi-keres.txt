@@ -1,0 +1,10 @@
+Készíts oktatási célú, helyben megnyitható szerződés-összehasonlító prototípust az alábbi két fiktív mintából. Magyar nyelvű legyen. Ne kapcsolódjon külső szolgáltatáshoz, ne hívjon AI-modellt, ne továbbítson adatot, és ne írja felül a forrásokat.
+
+A nézet mutassa egymás mellett a két változatot, a változott mezőket és az eredeti szövegrészleteket. Az összeg, pénznem, nettó/bruttó jelleg, határidő és feladatleírás külön mező legyen. A hiányzó mezőt hiányzóként jelölje. Az összehasonlítható számokat pontos szabállyal hasonlítsa össze; a változás jogszerűségét ne minősítse.
+
+1. minta: Nettó díj 120 000 000 Ft. Teljesítési határidő: 2026. június 30. Feladat: telepítés és dokumentáció.
+2. minta: Nettó díj 144 000 000 Ft. Teljesítési határidő: 2026. augusztus 31. Feladat: telepítés, dokumentáció és három hónap támogatás.
+
+Az elvárt ellenőrizhető eredmény: a nettó díj különbsége 24 000 000 Ft, növekedése 20%; a határidő és a feladat is változott. Ne nevezd ezt kárnak vagy túlárazásnak.
+
+Adj magyarázatot a működésről és az ellenőrzés módjáról. A képernyőn szerepeljen: „Fiktív oktatási prototípus; valós ügyadat kezelésére nem értékelt.”

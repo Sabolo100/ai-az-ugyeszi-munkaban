@@ -1,0 +1,17 @@
+{
+  "tudastar": "/hatter",
+  "tudastar/ugyeszi-munka": "/hatter/folyamat-es-ido",
+  "tudastar/idoveszteseg-es-gyorsitas": "/hatter/folyamat-es-ido",
+  "tudastar/tenyek-es-bizonyitas": "/hatter/tenyallasok",
+  "tudastar/ai-a-gyakorlatban": "/tanulmany/ai-eszkozok-es-biztonsagos-hasznalat",
+  "tudastar/eszkozok-es-beszerzes": "/tanulmany/bevezetes-meres-es-dontesi-terv",
+  "tudastar/jogi-es-adatvedelmi-garanciak": "/hatter/biztonsagos-hasznalat",
+  "tudastar/kilencven-napos-proba": "/tanulmany/bevezetes-meres-es-dontesi-terv",
+  "tudastar/mintaugy": "/mintaugy",
+  "tanulmany/00_vezetoi_attekintes": "/tanulmany/vezetoi-attekintes",
+  "tanulmany/01_jogi_keret_es_munkafolyamat": "/tanulmany/jogi-keret-es-munkafolyamat",
+  "tanulmany/02_tenyallasok_es_bizonyitasi_terv": "/tanulmany/tenyallasok-es-bizonyitasi-terv",
+  "tanulmany/03_ai_eszkozok_es_biztonsagos_hasznalat": "/tanulmany/ai-eszkozok-es-biztonsagos-hasznalat",
+  "tanulmany/04_bevezetes_meres_es_dontesi_terv": "/tanulmany/bevezetes-meres-es-dontesi-terv",
+  "tanulmany/05_forrasjegyzek_es_kutatasi_korlatok": "/tanulmany/forrasjegyzek-es-kutatasi-korlatok"
+}

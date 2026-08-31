@@ -1,0 +1,3729 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Állami korrupciós ügyek gyorsítása AI-támogatással</title>
+    <style>
+      :root {
+        --ink: #20323f;
+        --muted: #5a6c79;
+        --accent: #23638c;
+        --line: #dce5ec;
+        --paper: #fff;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 28px;
+      }
+      body {
+        margin: 0;
+        background: #edf2f5;
+        color: var(--ink);
+        font:
+          17px/1.65 'Segoe UI',
+          Arial,
+          sans-serif;
+      }
+      aside {
+        position: fixed;
+        inset: 0 auto 0 0;
+        width: 310px;
+        overflow-y: auto;
+        padding: 26px 22px;
+        background: #17344a;
+        color: #e6eef4;
+      }
+      aside h2 {
+        font-size: 17px;
+        color: white;
+        margin: 0 0 14px;
+      }
+      aside a {
+        display: block;
+        color: #dce8f1;
+        font-size: 13px;
+        line-height: 1.4;
+        padding: 5px 0;
+        text-decoration: none;
+      }
+      aside a.chapter {
+        font-weight: 700;
+        font-size: 14px;
+        border-top: 1px solid #365568;
+        margin-top: 15px;
+        padding-top: 12px;
+      }
+      aside a:hover {
+        color: white;
+        text-decoration: underline;
+      }
+      aside .stamp {
+        font-size: 12px;
+        color: #aec7d8;
+        margin-bottom: 18px;
+      }
+      main {
+        max-width: 1130px;
+        margin-left: 310px;
+        background: white;
+        padding: 48px 58px 100px;
+        min-height: 100vh;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1.22;
+        letter-spacing: -0.4px;
+        color: #17344a;
+        margin: 0 0 22px;
+      }
+      h2 {
+        font-size: 25px;
+        line-height: 1.3;
+        color: #23638c;
+        margin: 36px 0 16px;
+      }
+      h3 {
+        font-size: 20px;
+        line-height: 1.35;
+        color: #264c65;
+        margin: 28px 0 12px;
+      }
+      p {
+        margin: 0 0 14px;
+      }
+      li {
+        margin: 0 0 8px;
+      }
+      a {
+        color: #21618c;
+        text-underline-offset: 3px;
+      }
+      strong {
+        font-weight: 650;
+      }
+      section + section {
+        margin-top: 70px;
+        padding-top: 44px;
+        border-top: 2px solid #dce5ec;
+      }
+      .tablewrap {
+        overflow-x: auto;
+        margin: 22px 0;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      th,
+      td {
+        padding: 11px 12px;
+        border: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: #edf2f5;
+        font-weight: 650;
+      }
+      tbody tr:nth-child(even) {
+        background: #fafcfd;
+      }
+      .ref {
+        font-size: 0.85em;
+        white-space: nowrap;
+      }
+      .source {
+        scroll-margin-top: 25px;
+      }
+      button {
+        font: inherit;
+        background: #fff;
+        border: 1px solid #b5c9d7;
+        border-radius: 5px;
+        padding: 7px 13px;
+        color: #17344a;
+        cursor: pointer;
+        margin-bottom: 18px;
+      }
+      @media (min-width: 1600px) {
+        main {
+          margin-left: calc(310px + (100vw - 1600px) / 2);
+        }
+      }
+      @media (max-width: 1000px) {
+        aside {
+          position: relative;
+          width: auto;
+          max-height: 280px;
+        }
+        main {
+          margin-left: 0;
+          padding: 30px 24px;
+        }
+        h1 {
+          font-size: 28px;
+        }
+      }
+      @media print {
+        @page {
+          size: A4;
+          margin: 18mm;
+        }
+        aside,
+        button {
+          display: none;
+        }
+        body {
+          background: white;
+          font-size: 10.5pt;
+          line-height: 1.4;
+        }
+        main {
+          margin: 0;
+          max-width: none;
+          padding: 0;
+        }
+        section + section {
+          break-before: page;
+          border: 0;
+          padding: 0;
+          margin: 0;
+        }
+        h1 {
+          font-size: 22pt;
+        }
+        h2 {
+          font-size: 16pt;
+        }
+        h3 {
+          font-size: 12pt;
+        }
+        h1,
+        h2,
+        h3 {
+          break-after: avoid;
+        }
+        table {
+          font-size: 8.5pt;
+        }
+        tr {
+          break-inside: avoid;
+        }
+        thead {
+          display: table-header-group;
+        }
+        .tablewrap {
+          overflow: visible;
+        }
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <aside>
+      <h2>Munkaanyag</h2>
+      <div class="stamp">
+        2026. augusztus 30. · 1.0<br />43 hivatkozott forrástétel
+      </div>
+      <a class="chapter" href="#chapter0">Vezetői áttekintés</a
+      ><a href="#chapter0-h3">Vezetői áttekintés</a
+      ><a class="chapter" href="#chapter1"
+        >1. Magyar jogi keret, ügyészi munka és időigény</a
+      ><a href="#chapter1-h2">1.1. Mire használható ez az anyag?</a
+      ><a href="#chapter1-h6"
+        >1.2. Az új hivatal: létrejött, de az indulást nem szabad egyetlen
+        dátumként kezelni</a
+      ><a href="#chapter1-h13">1.3. Szereplők és munkamegosztás</a
+      ><a href="#chapter1-h25"
+        >1.4. Miből áll egy ügyész munkája egy ilyen ügyben?</a
+      ><a href="#chapter1-h49">1.5. Mennyi időt vesznek igénybe a feladatok?</a
+      ><a href="#chapter1-h65"
+        >1.6. Az iratolvasási feltételezés számszerű próbája</a
+      ><a class="chapter" href="#chapter2"
+        >2. Mit kell megtalálni és bizonyítani?</a
+      ><a href="#chapter2-h2"
+        >2.1. Az alapegység: állítás, forrás, ellenőrzés, jogi jelentőség</a
+      ><a href="#chapter2-h7">2.2. Rövid jogi térkép</a
+      ><a href="#chapter2-h10"
+        >2.3. Hivatali vesztegetés: a döntés és az előny összekapcsolása</a
+      ><a href="#chapter2-h17"
+        >2.4. Gazdasági vesztegetés: nem minden állami cégvezető hivatalos
+        személy</a
+      ><a href="#chapter2-h22"
+        >2.5. Befolyás vásárlása és befolyással üzérkedés</a
+      ><a href="#chapter2-h26"
+        >2.6. Hivatali visszaélés: a szabálytalanság mellett a célzat is
+        számít</a
+      ><a href="#chapter2-h30"
+        >2.7. Hűtlen kezelés és hanyag kezelés: az árkülönbség nem kész
+        bizonyítás</a
+      ><a href="#chapter2-h37"
+        >2.8. Költségvetési csalás: az elszámolás mögötti gazdasági esemény</a
+      ><a href="#chapter2-h42"
+        >2.9. Közbeszerzési kartell: az ajánlatok közötti egyezés mögé kell
+        nézni</a
+      ><a href="#chapter2-h50"
+        >2.10. Gazdasági erőfölény, piackizárás és állami intézkedések</a
+      ><a href="#chapter2-h55">2.11. Pénzmosás és vagyonfelkutatás</a
+      ><a href="#chapter2-h61"
+        >2.12. A természetes személy és a cég felelősségét külön kell
+        felépíteni</a
+      ><a href="#chapter2-h65"
+        >2.13. Közös bizonyítási mátrix – minden fontos állításhoz</a
+      ><a href="#chapter2-h68"
+        >2.14. Végigvezetett mintapélda: fiktív megyei informatikai tender</a
+      ><a class="chapter" href="#chapter3"
+        >3. AI-eszközök, adatfeldolgozás és biztonságos használat</a
+      ><a href="#chapter3-h2">3.1. Milyen rendszert érdemes elképzelni?</a
+      ><a href="#chapter3-h7"
+        >3.2. Hol lehet gyorsítani? Feladatonkénti térkép</a
+      ><a href="#chapter3-h14">3.3. Hogyan nézzen ki egy AI-találat?</a
+      ><a href="#chapter3-h19"
+        >3.4. Mely létező eszközök lehetnek érdemben vizsgálhatók?</a
+      ><a href="#chapter3-h24"
+        >3.5. Mit célszerű készen venni, és mit sajátként kialakítani?</a
+      ><a href="#chapter3-h31"
+        >3.6. Milyen magyar adatforrásokat érdemes összekapcsolni?</a
+      ><a href="#chapter3-h34">3.7. Jogi és biztonsági feltételek</a
+      ><a href="#chapter3-h51">3.8. Javasolt használati szabály egy mondatban</a
+      ><a class="chapter" href="#chapter4"
+        >4. Bevezetés, mérés és döntési terv</a
+      ><a href="#chapter4-h2">4.1. Mitől lesz gyorsabb a teljes folyamat?</a
+      ><a href="#chapter4-h15">4.2. Az első 90 napos próba</a
+      ><a href="#chapter4-h24">4.3. Mit mérjünk, és mit ne?</a
+      ><a href="#chapter4-h35">4.4. Csapat és felelősség</a
+      ><a href="#chapter4-h39">4.5. Költségmodell: mit kell összehasonlítani?</a
+      ><a href="#chapter4-h45">4.6. Beszerzési ellenőrzőlista</a
+      ><a href="#chapter4-h48">4.7. Hat–tizenkét hónapos folytatás</a
+      ><a href="#chapter4-h52">4.8. Másolható belső munkalapok</a
+      ><a href="#chapter4-h59">4.9. Milyen döntés hozható meg most?</a
+      ><a class="chapter" href="#chapter5"
+        >5. Forrásjegyzék és kutatási korlátok</a
+      ><a href="#chapter5-h3">5.1. Magyar intézmények és eljárási keret</a
+      ><a href="#chapter5-h38"
+        >5.2. Magyar bizonyítási, ítélkezési és szakhatósági támpontok</a
+      ><a href="#chapter5-h59">5.3. Adatvédelem és AI-szabályozás</a
+      ><a href="#chapter5-h70">5.4. Dokumentált alkalmazás és termékforrások</a
+      ><a href="#chapter5-h89">5.5. Magyar adatforrások háttere</a
+      ><a href="#chapter5-h94">5.6. Amit ez a kutatás nem igazolt</a>
+    </aside>
+    <main>
+      <button onclick="window.print()">Nyomtatás / mentés PDF-ként</button>
+      <section id="chapter0">
+        <h1>Állami korrupciós ügyek gyorsítása AI-támogatással</h1>
+        <p>
+          <strong
+            >Magyar jogi, nyomozati és technológiai döntés-előkészítő
+            munkaanyag</strong
+          >
+        </p>
+        <p>
+          Kutatási zárónap: <strong>2026. augusztus 30.</strong> | Változat:
+          <strong>1.0</strong>
+        </p>
+        <h2 id="chapter0-h3">Vezetői áttekintés</h2>
+        <p>
+          <strong
+            >AI-val érdemben gyorsítható a nagy iratanyag feldolgozása, a
+            pénzügyi és kommunikációs összefüggések feltárása, valamint a
+            bizonyítási hiányok felismerése. A teljes nyomozás többéves
+            átfutását azonban csak technológiai és munkaszervezési változások
+            együtt rövidíthetik.</strong
+          >
+          A szakértői, külföldi és eljárási várakozásokat külön kell kezelni. A
+          bűnösség megállapítása, a vádemelés és a jogkorlátozó döntés nem
+          adható át az AI-nak.
+        </p>
+        <p>
+          A kiinduló feltételezés – sok szerződés, levél, hanganyag és vallomás
+          kézi áttekintése – helyes és fontos fejlesztési irány. Ugyanakkor az
+          ügyész munkájának nagy része nem egyszerű olvasás: azt kell
+          megállapítania, ki, mikor, milyen szerepben mit tett, ez mely
+          bűncselekmény elemeit merítheti ki, és mindez törvényesen megszerzett
+          bizonyítékból megállapítható-e. A rendszernek ezért nem általános
+          „korrupciódetektort”, hanem forrásokkal ellenőrizhető nyomozati és
+          bizonyítási munkát kell támogatnia.
+        </p>
+        <h3 id="chapter0-h6">Öt lényegi megállapítás</h3>
+        <p>
+          <strong
+            >1. Az új magyar intézményi keret valóban megváltozott.</strong
+          >
+          A 2026. évi XXXIV. törvény létrehozta a Nemzeti Vagyonvisszaszerzési
+          és Vagyonvédelmi Hivatalt. A hatáskörökhöz több hatálybalépési lépcső
+          tartozik; az intézmény létrejötte nem jelenti minden kapcsolódó jogkör
+          és hozzáférés egyidejű működését. Az ügyészi feladatot csak az arra
+          jogosult ügyész végezheti. Magyarország EPPO-részvételének 2026-os
+          megerősítése miatt a korábbi „Magyarország nem résztvevő” leírásokra
+          sem szabad automatikusan építeni; az operatív indulást és konkrét
+          hatáskört külön kell ellenőrizni.
+          <a class="ref" href="#F01">[F01, F11–F13]</a>
+        </p>
+        <p>
+          <strong
+            >2. A legsürgősebb gyorsítás gyakran az adat megszerzése és
+            rendezése.</strong
+          >
+          Korai adatmegőrzés, pontos banki és nemzetközi megkeresés, teljes
+          mellékletállomány és szakértőnek átadható, egységes adatcsomag nélkül
+          a gyorsabb olvasás hiányos aktát dolgoz fel. A digitális iratok
+          teljességének ellenőrzése és a tranzakciók azonosítóalapú összekötése
+          akár generatív AI nélkül is nagy hasznot hozhat.
+        </p>
+        <p>
+          <strong>3. A gyanújel és a bizonyítás között több lépcső van.</strong>
+          A túlárazás, ismétlődő nyertes, közös céges kapcsolat, nagy
+          tanácsadási díj vagy ellentmondó vallomás vizsgálati jel.
+          Vesztegetésnél az előny és a működés kapcsolata, hűtlen kezelésnél a
+          kötelezettségszegés, hátrány és szándék, kartellnél a konkrét
+          egyeztetés és versenykorlátozás, erőfölényes visszaélésnél a piac és a
+          magatartás külön bizonyítandó. Közbeszerzési, versenyjogi és
+          büntetőjogi jogsértés nem felcserélhető.
+          <a class="ref" href="#F07">[F07–F09]</a>
+        </p>
+        <p>
+          <strong
+            >4. Léteznek alkalmasnak tűnő részrendszerek, de nincs igazolt, kész
+            magyar „AI-ügyész”.</strong
+          >
+          A piaci körképben szerepel a Relativity, Nuix, Cellebrite, Magnet,
+          Everlaw és a magyar jogi kutatás szempontjából a Wolters Kluwer
+          Libra/Jogtár. Eltérő feladatot fednek le. A magyar nyelvű iratokon
+          elért pontosság, a bűnügyi adatkezelés, a tényleges telepítési mód és
+          a költség ellenőrzött próbát igényel. A brit SFO dokumentált
+          TAR-próbája a módszer gyakorlati realitását mutatja, nem magyar
+          teljesítménygarancia. <a class="ref" href="#F33">[F33–F41]</a>
+        </p>
+        <p>
+          <strong
+            >5. A jó cél több megalapozott és időben eldöntött ügy, nem pusztán
+            több vád.</strong
+          >
+          A téves találat, kihagyott mentő bizonyíték vagy jogellenes
+          adatkezelés később többszörös időveszteséget és jogsérelmet okozhat. A
+          helyes megszüntetés, a gyorsan felismert hatásköri probléma és az
+          időben biztosított vagyon ugyancsak szakmai eredmény.
+        </p>
+        <h3 id="chapter0-h12">Javasolt első döntés</h3>
+        <p>
+          Egy
+          <strong
+            >90 napos, szűk körű összehasonlító próba előkészítését</strong
+          >
+          célszerű elindítani. A próbaórát az adat-, jogi és biztonsági
+          előfeltételek biztosítása után kell indítani. Első feladatok:
+          kereshető és ellenőrzött iratállomány; e-mail/szerződés
+          relevanciaszűrés; forrásos idővonal; vallomás–irat eltérésjelzés;
+          bizonyítási hiánylista.
+        </p>
+        <p>
+          A javasolt megközelítés: bevált adatbeviteli és iratáttekintő alap,
+          erre saját magyar bizonyítási munkafolyamat és ellenőrzési rendszer. A
+          teljes forenzikus környezetet vagy nagy nyelvi modellt nem indokolt
+          első lépésként újrafejleszteni. Az AI ne döntsön gyanúsításról vagy
+          vádról, és ne töröljön vagy hagyjon el automatikusan bizonyítékot.
+        </p>
+        <h3 id="chapter0-h15">Hol várható a legtöbb haszon?</h3>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Prioritás</th>
+                <th scope="col">Beavatkozás</th>
+                <th scope="col">Várt hatás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Azonnal</td>
+                <td>
+                  Hatáskör, elévülés, adatmegőrzés és vagyonvesztés ellenőrzése
+                </td>
+                <td>Elvesző lehetőségek megelőzése</td>
+              </tr>
+              <tr>
+                <td>Első kör</td>
+                <td>
+                  Közös iratjegyzék, OCR, csatolmány- és duplikátumkezelés
+                </td>
+                <td>Kevesebb ismételt munka, jobb kereshetőség</td>
+              </tr>
+              <tr>
+                <td>Első kör</td>
+                <td>
+                  Forrásos keresés, idővonal, szereplő- és pénzkapcsolatok
+                </td>
+                <td>Gyorsabb tényrekonstrukció</td>
+              </tr>
+              <tr>
+                <td>Első kör</td>
+                <td>Bizonyítási mátrix és kéthetenkénti hiányvizsgálat</td>
+                <td>Pontosabb adatbeszerzés, kevesebb késői újramunka</td>
+              </tr>
+              <tr>
+                <td>Ellenőrzött próba után</td>
+                <td>Relevanciarangsor, hangfeldolgozás, eltérésjelzés</td>
+                <td>Kevesebb kézi áttekintés megfelelő minőség mellett</td>
+              </tr>
+              <tr>
+                <td>Később</td>
+                <td>
+                  Elfogadott tényekből vádiratvázlat, ügyek közötti keresés
+                </td>
+                <td>
+                  Gyorsabb összeállítás, szigorú hozzáférési és minőségi rendben
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 id="chapter0-h17">Mekkora időnyereség reális?</h3>
+        <p>
+          Magyar korrupciós nyomozások feladatszintű időfelhasználásáról a
+          kutatás nem talált olyan ellenőrzött nyilvános adatsort, amelyből
+          megbízható százalékos országos ígéret tehető. Az anyagban szereplő
+          munkaidők és megtakarítások ezért <strong>tervezési példák</strong>,
+          nem mért tények.
+        </p>
+        <p>
+          Egy bemutatott számításban a nagy iratanyag első feldolgozása 3000
+          óráról – beállítással, mintavétellel és ellenőrzéssel együtt – 1583
+          órára csökkenne, ha a feltételezett minőség és munkasebesség
+          teljesülne. Ez körülbelül 47% munkaóra-nyereség az adott
+          munkacsomagban. Egy másik példában a tizenkét hónapos ügy öt hónapnyi
+          javítható munkájának 40%-os gyorsítása két hónap naptári nyereség; a
+          külföldi adat késése ezt is csökkentheti. E két szám külön
+          forgatókönyv, nem előrejelzés.
+        </p>
+        <h3 id="chapter0-h20">Mit kell védeni a gyorsítás közben?</h3>
+        <p>
+          Minden lényegi AI-állítás mögött legyen megnyitható eredeti forrás. A
+          mentő adatok ugyanolyan figyelmet kapjanak, mint a terhelők. Az
+          eredeti és a gépi munkapéldány különüljön el. Legyen látható a be nem
+          olvasott irat, a bizonytalan leirat és a nem kiemelt állomány
+          ellenőrzésének módja. A hozzáférést az indexre, modellhívásra, naplóra
+          és exportra is érvényesíteni kell.
+        </p>
+        <p>
+          A bűnügyi adatkezeléshez nem elegendő általános GDPR-megfelelőséget
+          ígérni: a bűnüldözési adatvédelmi és eljárási szabályok külön
+          vizsgálandók. Az AI Act alkalmazásánál a 2026/1744 módosítással
+          változott határidőket és a konkrét funkció besorolását is figyelembe
+          kell venni. <a class="ref" href="#F28">[F28–F32]</a>
+        </p>
+        <h3 id="chapter0-h23">Hogyan olvasható az anyag?</h3>
+        <p>
+          Az <strong>1. fejezet</strong> a magyar intézményeket, ügyészi
+          munkafázisokat, jogi határidőket és időveszteségeket tárgyalja. A
+          <strong>2. fejezet</strong> tényállásonként mutatja be a bizonyítandó
+          kérdéseket, gyanújeleket, forrásokat és alternatív magyarázatokat. A
+          <strong>3. fejezet</strong> a feladatokat konkrét technológiai
+          képességekhez és termékjelöltekhez kapcsolja, adatvédelmi és
+          bizonyítási feltételekkel. A <strong>4. fejezet</strong> kipróbálási
+          tervet, mérőszámokat, költségmodellt, beszerzési kérdéseket és
+          használható munkalapokat ad. Az <strong>5. fejezet</strong> az
+          ellenőrzéshez szükséges forrásjegyzék.
+        </p>
+        <p>
+          Ez döntés-előkészítő kutatás, nem konkrét ügyre adott jogi
+          szakvélemény, teljes jogszabálykommentár vagy terméktanúsítás. A
+          források 2026. augusztus 30-án ellenőrzött állapothoz kötődnek; új
+          alkalmazás előtt a hatályt és az intézményi működést ismét ellenőrizni
+          kell.
+        </p>
+      </section>
+      <section id="chapter1">
+        <h1>1. Magyar jogi keret, ügyészi munka és időigény</h1>
+        <p>
+          <strong
+            >Kutatási zárónap: 2026. augusztus 30. | Döntés-előkészítő
+            munkaanyag, 1.0</strong
+          >
+        </p>
+        <h2 id="chapter1-h2">1.1. Mire használható ez az anyag?</h2>
+        <p>
+          A cél az állami és önkormányzati vagyont, közbeszerzéseket,
+          támogatásokat és uniós forrásokat érintő ügyek gyorsabb, jogszerű és
+          bizonyítható feldolgozásának megtervezése. Nem konkrét személyek
+          felelősségét vizsgálja, és nem vádemelési utasítás. A végső
+          minősítéshez az adott ügy teljes iratanyaga, az elkövetéskori és
+          későbbi jogállapot összevetése, valamint eljáró magyar büntetőjogász
+          szükséges.
+        </p>
+        <p>
+          Az anyag három állítástípust különböztet meg.
+          <strong>Jogszabályi tény</strong>: hivatkozott jogforrásból
+          ellenőrizhető. <strong>Tervezési becslés</strong>: feltételezett
+          kapacitás és adatmennyiség alapján készül, nem magyar ügyészségi
+          statisztika. <strong>Javaslat</strong>: a kutatás alapján kialakított
+          munkaszervezési vagy technológiai megoldás, amelyet helyben mérni
+          kell. A termékfunkciók gyártói állítások, nem saját teszteredmények.
+        </p>
+        <p>
+          A források az F-számok alapján a közös forrásjegyzékben
+          visszakereshetők. A dátumozott jogszabályállapot elsőbbséget élvez egy
+          korábbi intézményi ismertetővel, sajtóközleménnyel vagy tervezettel
+          szemben. Az általános jogszabálylinkek később más időállapotot
+          mutathatnak; a megjelölt rendelkezéseket új felhasználás előtt ismét
+          ellenőrizni kell.
+        </p>
+        <h2 id="chapter1-h6">
+          1.2. Az új hivatal: létrejött, de az indulást nem szabad egyetlen
+          dátumként kezelni
+        </h2>
+        <p>
+          <strong
+            >A 2026. évi XXXIV. törvény létrehozta a Nemzeti
+            Vagyonvisszaszerzési és Vagyonvédelmi Hivatalt (NVVH).</strong
+          >
+          A törvény 1–6. §-a vizsgálati, vagyonvédelmi és büntetőeljárási
+          funkciókat kapcsol össze; az 5. § közvádlói szerepet is nevesít. A 18.
+          § alapján vádemelést és vádképviseletet kizárólag a Hivatalba
+          beosztott ügyész végezhet. Nem valamennyi munkatárs kap ügyészi
+          jogkört. <a class="ref" href="#F01">[F01]</a>
+        </p>
+        <p>
+          Az alapító törvényt 2026. július 28-án hirdették ki; főszabály szerint
+          július 29-én lépett hatályba. A 63. § további lépcsőket tartalmaz: a
+          47. § augusztus 13-án, a 18. § augusztus 26-án; számos kapcsolódó
+          módosítás szeptember 27-én; a 198. alcím október 1-jén; a 196–197.
+          alcím 2027. január 1-jén lép hatályba. Az utóbbiak jogi személyek
+          nyilvántartásához és eljárásaihoz kapcsolódnak.
+          <a class="ref" href="#F01">[F01, F02]</a>
+        </p>
+        <p>
+          <strong>Működési következtetés:</strong> minden ügyhöz dátumhoz kötött
+          hatásköri ellenőrzőlap kell. A szervezet létrejötte önmagában nem
+          igazolja az összes kapcsolódó eljárási jogosultság azonnali
+          gyakorolhatóságát. A további fejezetek az általános büntetőeljárási
+          munkát és az NVVH számára javasolt célfolyamatot mutatják be; nem
+          állítják, hogy 2026. augusztus 30-án az összes javasolt kapcsolat,
+          álláshely és informatikai hozzáférés már működik.
+        </p>
+        <p>Az első ellenőrzőlap javasolt kérdései:</p>
+        <ul>
+          <li>
+            Melyik konkrét, az intézkedés napján hatályos rendelkezés adja a
+            hatáskört?
+          </li>
+          <li>
+            Közvagyonvédelmi vizsgálat, büntetőeljárás, polgári fellépés vagy
+            más hatósági eljárás zajlik?
+          </li>
+          <li>
+            Ki hozhat és írhat alá döntést; kell-e ügyészi vagy bírói engedély?
+          </li>
+          <li>
+            Van-e már eljáró szerv, és szükséges-e ügyátadás, hatásköri
+            egyeztetés vagy kapcsolódó eljárás?
+          </li>
+          <li>
+            Mi a jogalapja az adat átvételének, összekapcsolásának és más
+            eljárásban történő felhasználásának?
+          </li>
+        </ul>
+        <p>
+          Az NVVH-t nem szabad összekeverni a korábbi rendőrségi
+          vagyonvisszaszerzési szervezettel. A rendőrségi vagyonfelkutatás
+          történeti hátterét az Országgyűlés 2025-ös tájékoztatója ismerteti; ez
+          nem az új hivatal 2026-os működési kézikönyve.
+          <a class="ref" href="#F03">[F03]</a>
+        </p>
+        <h2 id="chapter1-h13">1.3. Szereplők és munkamegosztás</h2>
+        <p>
+          <strong>Ügyészség.</strong> Az általános rendszerben a felderítés
+          törvényességi felügyelete és a gyanúsítás utáni vizsgálat irányítása
+          különböző szerep. Az ügyészség maga is végezhet nyomozási cselekményt,
+          és törvényi keretek között nyomozhat. Az ügyész feladata a
+          bizonyítható tényállás jogi értékelése és az eljárásról való döntés;
+          nem egyszerűen a nyomozók által kiválasztott iratok felolvasása.
+          <a class="ref" href="#F04">[F04, F05]</a>
+        </p>
+        <p>
+          <strong>Rendőrség és NAV bűnügyi szervei.</strong> Az általános
+          nyomozói munkában adatot szereznek be, tanúkat hallgatnak ki,
+          kutatást, lefoglalást és egyéb cselekményeket végeznek, digitális és
+          pénzügyi adatot dolgoznak fel. A konkrét hatáskört a Be., a kapcsolódó
+          jogszabályok és az ügy sajátosságai határozzák meg. A költségvetési
+          csalás NAV-érintettségét, a hivatali korrupció ügyészségi nyomozási
+          szabályait és az NVVH kapcsolódó jogköreit ügyenként kell összevetni.
+          <a class="ref" href="#F04">[F04]</a>
+        </p>
+        <p>
+          <strong>NVVH.</strong> A célfolyamatban a közpénzügyi elemző, nyomozó,
+          ügyész és vagyonvédelmi szakember egymást kiegészítő munkát végez. A
+          közvagyonvédelmi vizsgálati megállapítás nem tehető automatikusan
+          büntetőeljárási bizonyítékká: az átvétel és felhasználás feltételeit
+          is vizsgálni kell. A törvényi indokolás a saját hatáskörű eljárás és a
+          más szerv felé tett feljelentés közötti különbséget is hangsúlyozza.
+          <a class="ref" href="#F06">[F06]</a>
+        </p>
+        <p>
+          <strong>Bíróság, nyomozási bíró.</strong> A bírói hatáskörbe tartozó
+          kényszerintézkedésekről, engedélyekről, jogorvoslatokról és végül a
+          bűnösségről nem a nyomozó, nem az ügyész és nem az AI dönt. A
+          gyorsítás nem iktathatja ki ezt az ellenőrzést.
+          <a class="ref" href="#F04">[F04]</a>
+        </p>
+        <p>
+          <strong>GVH.</strong> A kartell és a gazdasági erőfölénnyel való
+          visszaélés versenyfelügyeleti ügyeit a versenyjog alapján vizsgálja.
+          Ugyanaz a történet közbeszerzési, versenyjogi és büntetőjogi
+          kérdéseket is felvethet; a döntések jogalapja és bizonyítási feladata
+          eltér. A Tpvt. 11. § szerinti versenykorlátozó megállapodás, a 21. §
+          szerinti erőfölényes visszaélés és a Btk. 420. § szerinti
+          bűncselekmény nem felcserélhető.
+          <a class="ref" href="#F07">[F07, F08]</a>
+        </p>
+        <p>
+          <strong
+            >Közbeszerzési Hatóság és Közbeszerzési Döntőbizottság.</strong
+          >
+          A beszerzési szabályosság, jogorvoslat és ellenőrzés saját eljárási
+          rendben történik. A közbeszerzési szabálytalanság hasznos vizsgálati
+          kiindulópont lehet, de önmagában nem bizonyít vesztegetést vagy hűtlen
+          kezelést. <a class="ref" href="#F09">[F09]</a>
+        </p>
+        <p>
+          <strong
+            >Integritás Hatóság, ÁSZ, belső ellenőrzés,
+            támogatáskezelők.</strong
+          >
+          Ellenőrzésekből, jelentésekből és feljelentésekből releváns adatok
+          érkezhetnek. Az Integritás Hatóság feljelentései nem azonosak ügyészi
+          vádemelésekkel; a hatóság létezése nem helyettesíti a bűnügyi
+          bizonyítást. <a class="ref" href="#F10">[F10]</a>
+        </p>
+        <p>
+          <strong>EPPO, OLAF, Eurojust, Europol.</strong> E szervek szerepe
+          eltér: európai ügyészi eljárás, uniós igazgatási vizsgálat,
+          igazságügyi koordináció, illetve rendészeti információs és elemzési
+          támogatás. Külföldi együttműködésnél először a megfelelő csatornát
+          kell kiválasztani; az adatelemző platform nem teremt új hozzáférési
+          jogot.
+        </p>
+        <h3 id="chapter1-h22">
+          Külön 2026-os megjegyzés az Európai Ügyészségről
+        </h3>
+        <p>
+          Magyarország részvételét az (EU) 2026/1701 határozat megerősítette. Az
+          EPPO saját országoldala 2026. augusztus 2-i részvételi dátumot közöl,
+          és a magyarországi operatív indulást az európai ügyész kinevezését
+          követő huszadik naphoz köti. A Tanács ismertetője augusztus 3-át
+          jelöl; e közlési eltérés miatt napra pontos operatív jogkövetkeztetést
+          nem erre a két ismertetőre kell alapítani.
+          <a class="ref" href="#F11">[F11, F12]</a>
+        </p>
+        <p>
+          A csatlakozási döntés Magyarországra vonatkozó időbeli szabályát külön
+          kell figyelembe venni: az uniós pénzügyi érdekeket sértő, 2021. június
+          1. utáni cselekményekre kiterjedő hatáskör nem jelenti valamennyi régi
+          magyar korrupciós ügy EPPO-hoz kerülését. A tárgyi, területi, személyi
+          és időbeli feltételek, valamint a tényleges működés kezdete együtt
+          számítanak. <a class="ref" href="#F13">[F13]</a>
+        </p>
+        <h2 id="chapter1-h25">
+          1.4. Miből áll egy ügyész munkája egy ilyen ügyben?
+        </h2>
+        <p>
+          Az alábbi bontás <strong>javasolt munkaszervezési modell</strong>, nem
+          országosan előírt ügyészi munkanap-felosztás. Az ügyész teljes
+          munkájához ezen kívül tárgyalások, jogorvoslatok, vezetői és
+          igazgatási feladatok, egyes munkakörökben közérdekvédelmi vagy
+          büntetés-végrehajtási törvényességi feladatok is tartozhatnak. Ez az
+          anyag a vádemelésig vezető bűnügyi munkára összpontosít.
+          <a class="ref" href="#F05">[F05]</a>
+        </p>
+        <h3 id="chapter1-h27">A. Ügyindítás és jogi szűrés</h3>
+        <p>
+          Meg kell érteni, pontosan mi az állítás, honnan származik, melyik
+          cselekmény mikor történt, és ki járt el. Külön kérdés a bűncselekmény
+          gyanúja, az illetékes szerv, az elévülés, a korábbi jogerős elbírálás
+          és az azonnali adat- vagy vagyonvesztés veszélye. A politikai
+          jelentőség nem bizonyítási kategória.
+        </p>
+        <p>
+          Régi közpénzügyi ügyben külön idővonal kell a cselekményekhez és az
+          elévülés szempontjából releváns eljárási eseményekhez. A Btk. 2. §
+          szerinti időbeli alkalmazás miatt az elkövetéskori és az esetleg
+          enyhébb későbbi szabály összevetendő. Az új szerv létrejötte önmagában
+          nem tesz utólag bűncselekménnyé korábban jogszerű magatartást, és nem
+          ad általános felhatalmazást jogerősen lezárt ügyek újranyitására. A
+          megszüntetés utáni folytatás vagy rendkívüli jogorvoslat feltételeit
+          külön kell ellenőrizni. <a class="ref" href="#F04">[F04, F08]</a>
+        </p>
+        <p>
+          <strong>Kimenet:</strong> rövid ügyindító lap, jogi alternatívák,
+          sürgős feladatok, felelős és következő döntési pont.
+          <strong>Gyakori időveszteség:</strong> sok általános állítás, kevés
+          azonosítható szerződés vagy tranzakció; egymást ismétlő bejelentések;
+          korábban lezárt ügyek történetének újraépítése.
+        </p>
+        <h3 id="chapter1-h31">B. Bizonyítási terv és munkahipotézisek</h3>
+        <p>
+          Az ügycsoportot cselekményekre, szereplőkre és bizonyítandó elemekre
+          kell bontani. Meg kell határozni, mely tény hiánya akadályozná a
+          vádat, és milyen adat cáfolhatná a feltételezett történetet. A
+          felderítési szakaszban e tervezésnek igazodnia kell az eljáró szerv
+          tényleges jogköréhez; az ügyészi felügyelet nem változtatható
+          informális nyomozásirányítássá.
+        </p>
+        <p>
+          <strong>Kimenet:</strong> bizonyítási mátrix és beszerzési terv.
+          <strong>Időveszteség:</strong> határozatlan megbízás, például „nézzük
+          át az összes szerződést”; túl későn felismert hiányzó elem; azonos
+          kérdések többszöri vizsgálata.
+        </p>
+        <h3 id="chapter1-h34">C. Bizonyíték megszerzése és megőrzése</h3>
+        <p>
+          Adatkérés, kutatás, lefoglalás, pénzügyi megkeresés, tanúkihallgatás,
+          szakértő kirendelése és szükség esetén megfelelően engedélyezett
+          leplezett eszközök tartozhatnak ide. Az ügyész a rá tartozó
+          engedélyezést, indítványozást, jogi ellenőrzést és döntést végzi; az
+          adatmentést és elemzést többnyire szakemberek támogatják.
+        </p>
+        <p>
+          <strong>Kimenet:</strong> dokumentált eredetű, hozzáférhető és
+          felhasználhatóság szempontjából ellenőrzött adatállomány.
+          <strong>Időveszteség:</strong> hiányos megkeresések, rossz
+          exportformátum, csatolmányok hiánya, titkosított eszköz, nagy
+          adatmennyiség, külföldi megkeresés.
+        </p>
+        <h3 id="chapter1-h37">D. Tényrekonstrukció és személyhez rendelés</h3>
+        <p>
+          Nem elég megtalálni egy terhelő mondatot. Ki írta vagy mondta? Kinek?
+          Mikor? Melyik szerződésre vonatkozott? Teljes vagy csonkolt-e a
+          beszélgetés? Az adott személynek volt-e döntési joga vagy tényleges
+          ráhatása? A könyvelt pénzmozgás megtörtént-e, és mi volt a gazdasági
+          oka?
+        </p>
+        <p>
+          <strong>Kimenet:</strong> forráshivatkozásos idővonal, személy- és
+          cégtérkép, pénzút, azonosítási bizonytalanságok.
+          <strong>Időveszteség:</strong> különböző irattárak közötti kézi
+          egyeztetés; átnevezett cégek; azonos nevű személyek; régi munkakörök
+          és tulajdonosi állapotok visszaállítása.
+        </p>
+        <h3 id="chapter1-h40">
+          E. Kihallgatások és szakértői munka előkészítése, értékelése
+        </h3>
+        <p>
+          Az iratok alapján pontos kérdések készíthetők. Utána a válaszokat az
+          iratokkal és más vallomásokkal kell összevetni. A szakértőnek
+          technikai vagy gazdasági kérdést kell feltenni, nem azt, hogy
+          „történt-e bűncselekmény”. Például mennyi volt az összehasonlítható
+          műszaki tartalom korabeli piaci értéke, és mi magyarázza az
+          árkülönbséget?
+        </p>
+        <p>
+          <strong>Kimenet:</strong> megválaszolt ténykérdések és világosan
+          megjelölt bizonytalanságok. <strong>Időveszteség:</strong> ismételt
+          kihallgatás az előzetes iratáttekintés hiánya miatt;
+          szakvélemény-kiegészítés; nem összehasonlítható árak; hiányzó műszaki
+          dokumentáció.
+        </p>
+        <h3 id="chapter1-h43">
+          F. Folyamatos törvényességi és jogvédelmi munka
+        </h3>
+        <p>
+          Panaszok, védői indítványok, iratmegismerés, kizárási kérdések,
+          kényszerintézkedések indokoltsága és határidők követése. E munka nem
+          „adminisztratív akadály”: hibája a későbbi bizonyítás használhatóságát
+          és az eljárás tisztességességét érinti.
+        </p>
+        <p>
+          <strong>Kimenet:</strong> indokolt, határidőben meghozott döntés és
+          dokumentált hozzáférési rend. <strong>Időveszteség:</strong> széteső
+          iratjegyzék, hibás anonimizálás, hiányzó kézbesítés, ismétlődő
+          jogviták ugyanarról az adatról.
+        </p>
+        <h3 id="chapter1-h46">G. Vádemelési döntés és vádirat</h3>
+        <p>
+          A történetet vádpontonként és személyenként kell rendezni. Mi
+          bizonyítható, mivel, milyen jogi minősítéssel? Milyen mentő adat
+          maradt megmagyarázatlan? Indokolt-e további nyomozás, elkülönítés, más
+          eljárási megoldás vagy megszüntetés? A vádiratnak a tényállás mellett
+          a bizonyítás szerkezetét is kezelhetővé kell tennie.
+        </p>
+        <p>
+          <strong>Kimenet:</strong> megalapozott eljárási döntés, adott esetben
+          benyújtható vádirat és bizonyítási indítványok.
+          <strong>Időveszteség:</strong> a bizonyítékok rendszerezése csak a
+          végén kezdődik; a jogi elemzés és a bizonyítás nem ugyanazokra a
+          cselekményekre épül; túl nagy ügyben egymástól független részek is
+          várnak egymásra.
+        </p>
+        <h2 id="chapter1-h49">1.5. Mennyi időt vesznek igénybe a feladatok?</h2>
+        <p>
+          <strong
+            >Nincs olyan ellenőrzött nyilvános magyar adatsor a kutatásban,
+            amely nagy korrupciós ügyeknél feladatonként megmondaná az ügyészi
+            munkaórákat és a külső várakozást.</strong
+          >
+          A nyilvános ügyészségi statisztikák kiindulópontot adnak, de nem
+          helyettesítik a feladatidő-mérést. Ezért az alábbi számok kizárólag
+          kapacitástervezési becslések. <a class="ref" href="#F14">[F14]</a>
+        </p>
+        <p>
+          <strong>Feltételezett referenciaügy:</strong> 10–30 érintett cég; 3–8
+          potenciális terhelt; 20–60 tanú; 100 ezer–500 ezer elektronikus tétel
+          a csatolmányokkal együtt; 100–500 óra hang; 1–3 gazdasági vagy műszaki
+          szakkérdés. Az egyes sorok eltérő munkacsomagokat jelölnek;
+          időtartamaik átfedhetnek, ezért nem összeadandók. Egy embernap 8
+          munkaóra, az erőfeszítés az egész megjelölt szakmai csapatra
+          vonatkozik, nem csak az ügyészre.
+        </p>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Munkacsomag</th>
+                <th scope="col">Aktív ráfordítás – becslés</th>
+                <th scope="col">Naptári átfutás – becslés</th>
+                <th scope="col">Elsődleges fék</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ügyindító jogi szűrés</td>
+                <td>2–10 embernap</td>
+                <td>1–3 hét</td>
+                <td>Az állítás és az ügyhatár tisztázása</td>
+              </tr>
+              <tr>
+                <td>Első bizonyítási terv</td>
+                <td>5–20 embernap</td>
+                <td>1–4 hét</td>
+                <td>Hiányzó vagy egymásnak ellentmondó alapadat</td>
+              </tr>
+              <tr>
+                <td>Belföldi beszerzési kör koordinálása</td>
+                <td>5–20 embernap</td>
+                <td>2–8 hét/kör</td>
+                <td>Válaszidő és hiánypótlás</td>
+              </tr>
+              <tr>
+                <td>Digitális adatbevitel és minőségellenőrzés</td>
+                <td>10–40 embernap</td>
+                <td>1–6 hét</td>
+                <td>Formátum, mennyiség, titkosítás</td>
+              </tr>
+              <tr>
+                <td>Iratok első tartalmi feldolgozása</td>
+                <td>Külön volumenszámítás szerint</td>
+                <td>Hetek–hónapok</td>
+                <td>Releváns adatok aránya és ellenőrzési kapacitás</td>
+              </tr>
+              <tr>
+                <td>Egy tanú teljes munkacsomagja</td>
+                <td>0,5–2 embernap</td>
+                <td>1–4 hét szervezéssel</td>
+                <td>Időpont, előkészítés, utóellenőrzés</td>
+              </tr>
+              <tr>
+                <td>100 óra hang hiteles ellenőrzése</td>
+                <td>25–75 embernap</td>
+                <td>2–8 hét csapattal</td>
+                <td>Hangminőség, beszélők, visszahallgatás</td>
+              </tr>
+              <tr>
+                <td>Szakértői kérdés és szakvélemény kezelése</td>
+                <td>5–20 belső embernap</td>
+                <td>2–6 hónap teljes csomag</td>
+                <td>Adatpótlás és szakmai kapacitás</td>
+              </tr>
+              <tr>
+                <td>Külföldi bizonyítékbeszerzés</td>
+                <td>5–20 belső embernap</td>
+                <td>2–12+ hónap</td>
+                <td>Jogsegély, végrehajtás, helyi akadály</td>
+              </tr>
+              <tr>
+                <td>Vádirat és végső ellenőrzés</td>
+                <td>15–50 embernap</td>
+                <td>1–3 hónap</td>
+                <td>Rendezetlen tény- és bizonyítékanyag</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          A 2–6 hónapos szakértői munkacsomag-becslés
+          <strong>nem egyetlen szakvélemény törvényi határideje</strong>.
+          Magában foglalja a megfelelő szakértő kiválasztását, az adatok
+          előkészítését és a kiegészítő kérdések kezelését. Ugyanígy a
+          nemzetközi sor nem minden megkeresésre irányadó jogi határidő.
+        </p>
+        <h3 id="chapter1-h54">
+          Jogszabályi határidő és projektbecslés: négy fontos különbség
+        </h3>
+        <p>
+          A Be. 351. § szerint a gyanúsítotti kihallgatástól számított alapidő a
+          büntetési tételtől függően 1, 2 vagy 3 év: legfeljebb hároméves
+          tételnél egy év; köztes esetben két év; nyolcéves vagy súlyosabb
+          tételnél három év. Ügyészi és feltételes felettes ügyészségi
+          hosszabbítás lehetséges. Több gyanúsítottnál külön számítás, valamint
+          átmeneti és fogvatartási korlátok is relevánsak. Nem helyes az „összes
+          nyomozás két év” állítás. <a class="ref" href="#F15">[F15]</a>
+        </p>
+        <p>
+          A Be. 352. § szerinti teljes iratmegismerést főszabály szerint
+          legalább egy hónappal a vádemelés előtt biztosítani kell;
+          rövidítéséhez vagy mellőzéséhez a terhelt és védő hozzájárulása
+          szükséges. A szakvéleményre a Be. 189. § (6) bekezdése főszabályként
+          legfeljebb két hónapot, egyszer legfeljebb egy hónapos hosszabbítást
+          ír elő. <a class="ref" href="#F15">[F15]</a>
+        </p>
+        <p>
+          Az európai nyomozási határozatnál az elismerési döntés és a
+          végrehajtás főszabályi 30, illetve 90 napos rendje nem azonos a teljes
+          ügy átfutásával; vannak kivételek és gyakorlati akadályok.
+          <a class="ref" href="#F16">[F16]</a>
+        </p>
+        <p>
+          Az uniós elektronikus bizonyítékcsomag külön gyorsítási lehetőség: az
+          európai közlésre kötelező határozat meghatározott feltételekkel
+          közvetlen szolgáltatói megkeresést tesz lehetővé, általában 10 napos,
+          szűken meghatározott sürgős esetben 8 órás teljesítéssel. A megőrzési
+          és közlési határozatot meg kell különböztetni. A 2026-os indulásnál
+          országonkénti és technikai készültséget is ellenőrizni kell; nem
+          minden elektronikus adatra és szolgáltatóra alkalmazható ugyanúgy.
+          <a class="ref" href="#F17">[F17]</a>
+        </p>
+        <h3 id="chapter1-h59">Mi viszi igazán az időt?</h3>
+        <p>
+          <strong>1. A hiányzó bizonyíték megszerzése.</strong> A nyelvi modell
+          nem látja a be nem szerzett csatolmányt, eltűnt üzenetet vagy külföldi
+          bankszámlát. Korai, pontos adatmegőrzés és célzott beszerzés nélkül a
+          jobb kereső csak a hiányos aktában keres gyorsabban.
+        </p>
+        <p>
+          <strong>2. Az adatok összerendezése.</strong> A pénzügyi kivonat,
+          szerződés, e-mail és vallomás más azonosítót használ. Gyakran az viszi
+          el az időt, hogy kiderüljön: ugyanarról a projektről beszélnek-e. A
+          strukturált adategyeztetés legalább olyan fontos, mint a generatív AI.
+        </p>
+        <p>
+          <strong>3. Szándék, személyes szerep és gazdasági realitás.</strong> A
+          formális aláíró nem feltétlenül azonos a tényleges döntéshozóval, de a
+          hierarchiában elfoglalt hely önmagában nem bizonyít részvételt. A
+          rossz üzleti eredmény és a szándékos vagyonkárosítás elhatárolása
+          külön elemzés.
+        </p>
+        <p>
+          <strong>4. Szakértő, külföld, sokszereplős ügy.</strong> Ha ezek a
+          leghosszabb függőségi lánc elemei, a dokumentumolvasás felezése sem
+          felezi meg az ügyet. Az egymástól független feladatok jogszerű
+          párhuzamosítása és a hiánypótlási körök csökkentése hozhat áttörést.
+        </p>
+        <p>
+          <strong>5. Újramunka.</strong> Hiányos iratjegyzék, elhibázott
+          keresés, későn felismert védői titok, nem reprodukálható számítás. A
+          kezdeti minőségellenőrzés munkaigényes, de kisebb költség lehet, mint
+          hónapok múlva újra elvégezni a feldolgozást.
+        </p>
+        <h2 id="chapter1-h65">
+          1.6. Az iratolvasási feltételezés számszerű próbája
+        </h2>
+        <p>
+          <strong>Szemléltető számítás, nem mért teljesítmény:</strong> 300 000
+          tételből pontos duplikátumok és e-mail-szálak kezelése után 90 000
+          felülvizsgálati egység marad. Feltételezett 30 egység/óra mellett az
+          első teljes átolvasás 3000 óra. Hat olvasó, napi öt tényleges
+          feldolgozási órával 100 munkanap alatt végezne. A hosszú szerződés és
+          az egysoros levél nem azonos munka; az egységdefiníciót a próba során
+          rögzíteni kell.
+        </p>
+        <p>
+          Egy lehetséges AI-támogatott változatban 25 000 kiemelt egység
+          ellenőrzése 833 óra, 3000 mintázott negatív egységé 100 óra, beállítás
+          és minőségvizsgálat 250 óra, összetett ellenőrzés és újramunka 400
+          óra: összesen 1583 óra, azaz hozzávetőleg 47%-kal kevesebb munka. A 25
+          000-es és 3000-es darabszám nem ajánlott univerzális küszöb, csak
+          számítási példa. A nem kiemelt iratok elhagyását igazoló
+          minőségvizsgálat nélkül ez a megtakarítás nem tekinthető
+          elfogadhatónak.
+        </p>
+        <p>
+          A teljes ügy időnyeresége ennél kisebb lehet. Ha egy tizenkét hónapos,
+          példabeli ügy kritikus munkaláncából öt hónap érdemben javítható,
+          annak 40%-os rövidítése két hónap nyereséget ad: tizenkettő helyett
+          tíz hónapot. Ha a külföldi adat ennél később érkezik, a naptári
+          nyereség kisebb vagy nulla, miközben munkaóra akkor is felszabadulhat.
+        </p>
+        <p>
+          <strong>Mérési következmény:</strong> külön kell jelenteni a
+          felszabadult munkaórát, a beszerzési várakozást, a döntésig eltelt
+          napokat és a bizonyítás minőségét. Ezekből áll össze a valódi
+          eredmény.
+        </p>
+      </section>
+      <section id="chapter2">
+        <h1>2. Mit kell megtalálni és bizonyítani?</h1>
+        <p>
+          <strong
+            >A fejezetben szereplő ügyek és számok kitalált szemléltető
+            példák.</strong
+          >
+          A kérdéssorok nyomozási és fejlesztési tervezést támogatnak; nem
+          teljes kommentárok és nem konkrét ügyek jogi minősítései.
+        </p>
+        <h2 id="chapter2-h2">
+          2.1. Az alapegység: állítás, forrás, ellenőrzés, jogi jelentőség
+        </h2>
+        <p>
+          Egy használható bizonyítási rendszerben négy dolgot nem szabad
+          összeolvasztani:
+        </p>
+        <ul>
+          <li>
+            <strong>Forrás:</strong> például egy eredeti levél,
+            bankszámlakivonat, szerződés vagy hangfelvétel.
+          </li>
+          <li>
+            <strong>Tényállítás:</strong> például „a műszaki feltételek
+            tervezetét a későbbi nyertes munkatársa küldte”.
+          </li>
+          <li>
+            <strong>Következtetés:</strong> például „ez előzetes befolyásolásra
+            utalhat”.
+          </li>
+          <li>
+            <strong>Jogi értékelés:</strong> például mely tényállási elemhez
+            kapcsolódhat, és mi hiányzik még annak bizonyításához.
+          </li>
+        </ul>
+        <p>
+          Az első kettő ellenőrzése nélkül a harmadik és negyedik szint könnyen
+          megalapozatlan történetté válik. A nyelvi modell számára ezért nem
+          általános „korrupciókeresés” a jó feladat, hanem körülhatárolt
+          ténykérdés, pontos forráshelyekkel és alternatív magyarázatokkal.
+        </p>
+        <p>
+          <strong
+            >Bizonyítási minimumként nem létezik általános „három dokumentum”,
+            „két tanú” vagy „90%-os AI-bizonyosság”.</strong
+          >
+          A bizonyítási eszközök törvényes megszerzése és összességük emberi
+          értékelése számít. A puszta gyanújel, a személyre vonatkozó
+          megalapozott gyanú, a vádemelési döntés és a bírósági
+          bűnösségmegállapítás eltérő helyzet. A kétséget kizáróan nem
+          bizonyított tény nem értékelhető a terhelt terhére.
+          <a class="ref" href="#F04">[F04]</a>
+        </p>
+        <h2 id="chapter2-h7">2.2. Rövid jogi térkép</h2>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Vizsgálati irány</th>
+                <th scope="col">Jogi kiindulópont</th>
+                <th scope="col">Központi bizonyítási kérdés</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hivatali vesztegetés és elfogadása</td>
+                <td>Btk. 293–294. §</td>
+                <td>Jogtalan előny és kapcsolat a hivatalos működéssel</td>
+              </tr>
+              <tr>
+                <td>Gazdasági vesztegetés és elfogadása</td>
+                <td>Btk. 290–291. §</td>
+                <td>Előny, gazdasági szerep, kötelesség és tudattartalom</td>
+              </tr>
+              <tr>
+                <td>Befolyás vásárlása, befolyással üzérkedés</td>
+                <td>Btk. 298–299. §</td>
+                <td>Előny az állított befolyásért</td>
+              </tr>
+              <tr>
+                <td>Hivatali visszaélés</td>
+                <td>Btk. 305. §</td>
+                <td>Hivatali visszaélés és jogtalan előny/hátrány célzata</td>
+              </tr>
+              <tr>
+                <td>Hűtlen kezelés</td>
+                <td>Btk. 376. §</td>
+                <td>
+                  Vagyonkezelői kötelességszegés, vagyoni hátrány, szándék
+                </td>
+              </tr>
+              <tr>
+                <td>Hanyag kezelés</td>
+                <td>Btk. 377. §</td>
+                <td>
+                  Törvényen alapuló kezelés/felügyelet, gondatlan hátrányokozás
+                </td>
+              </tr>
+              <tr>
+                <td>Költségvetési csalás</td>
+                <td>Btk. 396. §</td>
+                <td>
+                  Költségvetési kapcsolat, megtévesztés vagy céleltérés, hátrány
+                </td>
+              </tr>
+              <tr>
+                <td>Közbeszerzési/koncessziós kartell</td>
+                <td>Btk. 420. §</td>
+                <td>Megállapodás, befolyásolási cél, versenykorlátozás</td>
+              </tr>
+              <tr>
+                <td>Versenyjogi kartell</td>
+                <td>Tpvt. 11. §; EUMSZ 101. cikk</td>
+                <td>Vállalkozások közötti versenykorlátozó együttműködés</td>
+              </tr>
+              <tr>
+                <td>Erőfölényes visszaélés</td>
+                <td>Tpvt. 21–22. §; EUMSZ 102. cikk</td>
+                <td>Érintett piac, erőfölény és visszaélés</td>
+              </tr>
+              <tr>
+                <td>Pénzmosás</td>
+                <td>Btk. 399–400. §</td>
+                <td>
+                  Büntetendő eredet, pénzkezelési magatartás, tudattartalom
+                </td>
+              </tr>
+              <tr>
+                <td>Kapcsolódó okirati/vagyoni magatartás</td>
+                <td>Btk. 342., 345., 372., 373., 403. §</td>
+                <td>
+                  Konkrét hamisítás, eltulajdonítás, megtévesztés vagy
+                  számviteli sérelem
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Jogforrások: <a class="ref" href="#F07">[F07, F08]</a>. A táblázat
+          tájékozódási térkép; a bekezdések, minősítő körülmények, értékhatárok,
+          időbeli jogállapot és halmazati kérdések külön ellenőrzést igényelnek.
+          A „kormányoldali korrupció” és a „verseny ellehetetlenítése” nem
+          önálló Btk.-tényállásnév.
+        </p>
+        <h2 id="chapter2-h10">
+          2.3. Hivatali vesztegetés: a döntés és az előny összekapcsolása
+        </h2>
+        <p>
+          <strong>Jogi fókusz:</strong> az aktív és passzív oldal eltérő
+          magatartásokat fog át. A hivatali működéssel összefüggő előny adása,
+          ígérete, kérése vagy elfogadása is releváns lehet; nem minden esetben
+          szükséges a pénz tényleges átadása vagy az ügyfélnek kedvező döntés
+          megvalósulása. A kötelességszegésre irányultság, illetve annak
+          megvalósítása további minősítési kérdés.
+          <a class="ref" href="#F08">[F08]</a>
+        </p>
+        <p><strong>Saját tervezésű ténykérdések:</strong></p>
+        <ul>
+          <li>
+            Mi a konkrét hatósági, támogatási, beszerzési vagy más hivatalos
+            ügy?
+          </li>
+          <li>
+            Mi igazolja az érintett hivatalos személyi minőségét az adott
+            időben?
+          </li>
+          <li>
+            Mi volt az előny: pénz, állás, kedvezmény, tartozás elengedése,
+            rokon cégének üzlet, utazás, más vagyoni vagy nem vagyoni előny?
+          </li>
+          <li>
+            Kinek ígérték vagy adták, és mi kapcsolja a hivatalos személyhez?
+          </li>
+          <li>
+            Mi mutatja, hogy az előny a hivatalos működéshez kapcsolódott, nem
+            önálló, valós ügylethez?
+          </li>
+          <li>
+            Ki kezdeményezett, milyen közvetítőn át, és mit tudtak az egyes
+            résztvevők?
+          </li>
+        </ul>
+        <p>
+          <strong>Keresendő forráscsoportok:</strong> döntés-előkészítő iratok;
+          hatásköri és delegálási dokumentumok; teljes kommunikációs szálak;
+          szerződések és mellékszolgáltatások; banki adatok; utazás- és
+          naptárbejegyzések; a tényleges szolgáltatást ismerő tanúk.
+        </p>
+        <p>
+          <strong>AI-jelzés lehet:</strong> döntéshez időben közeli, szokatlan
+          kifizetés; ugyanannak a közvetítőnek megjelenése a hivatalos és
+          magánügyletben; előre ismert döntési részlet.
+          <strong>Ezután emberi ellenőrzés kell:</strong> szerzőség, időbélyeg,
+          szövegkörnyezet, pénzügyi teljesítés és az ellenszolgáltatás valósága.
+        </p>
+        <p>
+          <strong>Mentő alternatíva:</strong> ténylegesen elvégzett tanácsadás,
+          korábbi dokumentált kölcsön visszafizetése, nyilvános és szabályosan
+          engedélyezett juttatás. A „tanácsadás” megnevezés nem bizonyítja sem a
+          jogszerűséget, sem a fiktív jelleget.
+        </p>
+        <h2 id="chapter2-h17">
+          2.4. Gazdasági vesztegetés: nem minden állami cégvezető hivatalos
+          személy
+        </h2>
+        <p>
+          Az állami tulajdonú társaság vezetője vagy beszerzője státuszát külön
+          kell értékelni. A köztulajdon ténye önmagában nem tesz minden
+          munkavállalót hivatalos személlyé. A Btk. 290. § aktív oldala a
+          kötelességszegésre irányuló előnyt vizsgálja; a 291. § szerinti
+          elfogadásnál a tevékenységgel való kapcsolat és az egyes fordulatok
+          feltételei számítanak. <a class="ref" href="#F08">[F08]</a>
+        </p>
+        <p>
+          <strong>Bizonyítási munkacsomag:</strong> munkaköri leírás, beszerzési
+          szabályzat, jóváhagyási lánc, összeférhetetlenségi nyilatkozat, előny
+          útja és kapcsolódó döntés. A munkatárs tényleges döntési mozgásterét
+          kell rekonstruálni, nem kizárólag a munkakör elnevezését.
+        </p>
+        <p>
+          <strong>AI-feladat:</strong> annak összevetése, hogy ki milyen
+          szerepben szerepel a szabályzatban, a levélváltásban és az aláírási
+          folyamatban. Feltárható például, hogy a formális döntést megelőzően ki
+          adott a többieknek utasítást. A rendszer jelölje azt is, ha egy
+          utasítás jogszerű szervezeti koordinációnak tűnik.
+        </p>
+        <p>
+          <strong>Gyakori tévedés:</strong> minden kedvező szerződést
+          korrupcióként kezelni. A releváns kérdés az előny és a kötelesség vagy
+          tevékenység összefüggése, valamint az érintettek tudata.
+        </p>
+        <h2 id="chapter2-h22">
+          2.5. Befolyás vásárlása és befolyással üzérkedés
+        </h2>
+        <p>
+          Egy közvetítő azt állíthatja, hogy el tud intézni egy támogatást vagy
+          döntést. A fizetés jogcíme lehet sikerdíj, tanácsadási díj vagy más
+          szerződés. A vizsgálat központi kérdése: milyen befolyásra
+          hivatkozott, mire kértek előnyt, és mit fogadott el a másik fél? Nem
+          feltétlenül a hivatalos személyhez történő továbbutalás az egyetlen
+          releváns bizonyítási út. <a class="ref" href="#F08">[F08]</a>
+        </p>
+        <p>
+          <strong>Munkakérdések:</strong> a közvetítő szavai és vállalásai; az
+          ügyfél ezekről való tudomása; a díj teljesítéshez vagy döntéshez
+          kötése; tényleges szakmai teljesítmény; az elérni kívánt személy vagy
+          szervezet azonosítása; a hivatalos személy tényleges részvétele vagy
+          annak hiánya.
+        </p>
+        <p>
+          <strong>AI-feladat:</strong> vállalások, díjfeltételek és döntési
+          dátumok kigyűjtése, szó szerinti forráshelyekkel. Külön címke
+          szükséges az „állította, hogy befolyása van” és a „bizonyítottan
+          befolyásolta” között. Az egyikből nem következik automatikusan a
+          másik.
+        </p>
+        <h2 id="chapter2-h26">
+          2.6. Hivatali visszaélés: a szabálytalanság mellett a célzat is számít
+        </h2>
+        <p>
+          Itt nem szükségképpen vesztegetési pénzt kell keresni. A hivatalos
+          szereppel való visszaélés és a jogtalan előny megszerzésére vagy
+          hátrány okozására irányuló célzat a kulcs. A Kúria kiemeli, hogy a
+          célzat a tudattartalom része, nem azonos a ténylegesen bekövetkező
+          eredménnyel. <a class="ref" href="#F18">[F18]</a>
+        </p>
+        <p>
+          <strong>Munkakérdések:</strong> mi volt az adott személy jogköre; mely
+          kötelességét, hatáskörét vagy hivatali helyzetét érintette a
+          cselekmény; kinek milyen jogtalan előnyt vagy hátrányt kívánt; mi utal
+          erre a döntés előtti vagy alatti magatartásban?
+        </p>
+        <p>
+          <strong>Lehetséges forrás:</strong> elutasított belső szakmai
+          vélemény, megváltoztatott értékelési szempont, indokolatlan eltérés az
+          összehasonlítható ügyektől, konkrét utasítás.
+          <strong>Alternatíva:</strong> dokumentált közérdekű vagy szakmai
+          indok, eltérő tényállás, jóhiszemű jogértelmezési tévedés. Egy bíróság
+          által később megsemmisített közigazgatási döntésből önmagában nem lesz
+          hivatali visszaélés.
+        </p>
+        <h2 id="chapter2-h30">
+          2.7. Hűtlen kezelés és hanyag kezelés: az árkülönbség nem kész
+          bizonyítás
+        </h2>
+        <p>
+          A hűtlen kezelés vizsgálatának gerince az idegen vagyon kezelésére
+          irányuló kötelezettség, annak megszegése, az okozott vagyoni hátrány
+          és az ezt átfogó szándékosság. A Kúria gyakorlata szerint a kockázatos
+          gazdálkodási döntés és a büntetőjogi felelősség nem azonos; a vagyoni
+          hátrányhoz való tudati viszony meghatározó. A hanyag kezelés pedig nem
+          korlátlanul alkalmazható „enyhébb változat”: a vagyon kezelésére vagy
+          felügyeletére vonatkozó megbízásnak közvetlenül törvényen kell
+          alapulnia, és az elkövetői kör is eltér.
+          <a class="ref" href="#F19">[F19, F20]</a>
+        </p>
+        <p><strong>Hat vizsgálandó blokk:</strong></p>
+        <ol>
+          <li>Kinek a vagyonáról van szó, és ki jogosult a kezelésére?</li>
+          <li>
+            Mely jogszabály, szerződés, szabályzat vagy megbízás alapozza meg a
+            kötelezettséget?
+          </li>
+          <li>Mely konkrét cselekmény vagy mulasztás sértette azt?</li>
+          <li>
+            Milyen összegű és mikor bekövetkezett vagyoni hátrány azonosítható?
+          </li>
+          <li>Mi kapcsolja okozatilag a kötelességszegést a hátrányhoz?</li>
+          <li>
+            Mit tudott a döntéshozó a hátrány lehetőségéről, és hogyan
+            viszonyult hozzá?
+          </li>
+        </ol>
+        <p>
+          <strong>Példa:</strong> egy önkormányzati cég 1,2 milliárd forintért
+          vásárol eszközt, amelyről egy utólagos adatbázis 750 milliós árszintet
+          mutat. A 450 milliós különbség vizsgálati jelzés. Nem kész kárösszeg.
+          Egyeztetni kell a műszaki tartalmat, mennyiséget, szállítás idejét,
+          garanciát, finanszírozást, devizát, adót, szállítási kockázatot és
+          piaci környezetet. Az utólag olcsóbb technológia nem bizonyít korábbi
+          túlárazást.
+        </p>
+        <p>
+          <strong>AI és hagyományos elemzés:</strong> szerződésverziók
+          összehasonlítása; hiányzó biztosítékok és teljesítésigazolások
+          jelzése; ártételek strukturálása. A tényleges összehasonlítás és
+          számítás ellenőrizhető táblázatban vagy programban történjen. Az LLM
+          ne találjon ki „piaci árat”, és ne számolja önállóan a büntetőjogi
+          hátrányt.
+        </p>
+        <p>
+          <strong>Mentő adatok célzott keresése:</strong> korabeli független
+          árajánlatok; valóban biztosított extra szolgáltatás; szakértői
+          előzetes vélemény; sürgősség okirata; döntéshozói ellenvélemény.
+          Ugyanakkor egy aláírt szakvélemény sem ad automatikus felmentést, ha
+          annak megalapozatlansága ismert volt.
+        </p>
+        <h2 id="chapter2-h37">
+          2.8. Költségvetési csalás: az elszámolás mögötti gazdasági esemény
+        </h2>
+        <p>
+          A támogatási ügyben azonosítani kell a költségvetési forrást, a
+          jogosultsági és felhasználási feltételeket, a valótlan adatot vagy
+          céltól eltérő felhasználást, a vagyoni hátrányt és a személyes
+          közreműködést. A Kúria céltól eltérő felhasználásról szóló döntése a
+          forrásnak normában vagy aktusban meghatározott rendeltetésére helyezi
+          a hangsúlyt. <a class="ref" href="#F21">[F21]</a>
+        </p>
+        <p>
+          <strong>Javasolt iratlánc:</strong> pályázat → támogatási döntés és
+          feltételek → vállalkozói szerződés → megrendelés → teljesítési
+          bizonyíték → számla → kifizetés → elszámolás → ellenőrzés. Minden
+          nyílnál rögzíteni kell a mennyiséget, időt, kedvezményezettet és
+          ellenőrző személyt.
+        </p>
+        <p>
+          <strong>Gyanújelek:</strong> ugyanaz a költség több projektben;
+          egymásnak ellentmondó dátumok; kapacitás nélküli alvállalkozó; azonos
+          fénykép több helyszínként; a banki utalás után gyors visszaforgatás;
+          valójában le nem szállított termék. A hiányzó irat önmagában nem
+          bizonyítja a teljesítés hiányát, de indokolhat további beszerzést.
+        </p>
+        <p>
+          <strong>AI-feladat:</strong> a dokumentumlánc mezőinek egyeztetése és
+          az ellentmondó állítások összekapcsolása.
+          <strong>Emberi/szakértői feladat:</strong> a teljesítés valóságának, a
+          támogatási feltétel jelentőségének és a büntetőjogi hátránynak a
+          megállapítása. A támogatási korrekció, visszafizetési kötelezettség és
+          büntetőjogi kár nem szükségképpen azonos összeg; az adóhatósági
+          megállapítás sem automatikus bűnösségi bizonyíték.
+          <a class="ref" href="#F22">[F22]</a>
+        </p>
+        <h2 id="chapter2-h42">
+          2.9. Közbeszerzési kartell: az ajánlatok közötti egyezés mögé kell
+          nézni
+        </h2>
+        <p>
+          A Btk. 420. § vizsgálatában az eljárás eredményének befolyásolására
+          irányuló, a törvény által körülírt megállapodás vagy összehangolt
+          magatartás, illetve döntés és a versenykorlátozás a lényeg. Nem minden
+          közbeszerzési hiba kartell. Nem minden versenyjogi kartell tartozik e
+          büntetőjogi tényállás alá. <a class="ref" href="#F08">[F08]</a>
+        </p>
+        <p>
+          <strong>Tipikus vizsgálati hipotézisek:</strong> előre kiosztott
+          nyertes; fedező ajánlat; egyeztetett ár; visszalépés fejében
+          alvállalkozói munka; földrajzi vagy ügyfélfelosztás; közös
+          ajánlatkészítőn keresztüli egyeztetés.
+        </p>
+        <p>
+          <strong
+            >A GVH útmutatói által is tárgyalt figyelmeztető minták:</strong
+          >
+          ismétlődő ajánlattevői kör, szokatlan áregyezés, azonos hibák,
+          visszalépések és későbbi alvállalkozói kapcsolatok. Ezek együttesen is
+          vizsgálati jelzések, nem automatikus ítéletek.
+          <a class="ref" href="#F23">[F23]</a>
+        </p>
+        <p><strong>AI és adatelemzés feladata:</strong></p>
+        <ul>
+          <li>
+            Dokumentumok szerkezeti és szöveges hasonlósága, ritka azonos
+            elütések keresése.
+          </li>
+          <li>
+            Árvektorok, rangsorok, nyertesváltások és alvállalkozói kapcsolatok
+            elemzése.
+          </li>
+          <li>
+            Ajánlattétel előtti kommunikáció időrendje, fájlverziók és szerzői
+            metaadatok összevetése.
+          </li>
+          <li>
+            A bizonyított kapcsolat és a feltételezett kapcsolat külön
+            megjelenítése.
+          </li>
+        </ul>
+        <p>
+          <strong>Ellenőrzés:</strong> közös kötelező sablon, nyilvános árlista,
+          ugyanaz a jogszerű szakmai tanácsadó, közös költségsokk vagy tényleges
+          kapacitáshiány magyarázhat egyezést. Metaadatot lehet örökölni és
+          módosítani, közös IP-cím lehet irodaházi vagy hálózati sajátosság;
+          ezekből szerzőség vagy egyeztetés nem következik automatikusan.
+        </p>
+        <p>
+          <strong>Magyar bírói példa:</strong> a Kúria Bfv.1124/2022/10. számú
+          határozata ismerteti az árlejtés előtti SMS-ek szerepét az ajánlati
+          összegekről folyó egyeztetés értékelésében. Ez alátámasztja a
+          kommunikáció és a tenderadat együtt vizsgálásának gyakorlati
+          jelentőségét, de nem univerzális bizonyítási recept.
+          <a class="ref" href="#F24">[F24]</a>
+        </p>
+        <h2 id="chapter2-h50">
+          2.10. Gazdasági erőfölény, piackizárás és állami intézkedések
+        </h2>
+        <p>
+          A „gazdasági erővel való visszaélés” hétköznapi fogalmát pontosítani
+          kell. A Tpvt. szerinti erőfölényes visszaéléshez az érintett termék-
+          és földrajzi piac, az erőfölény, a kifogásolt magatartás és a jogi
+          értékelés szükséges. A nagy méret, állami kapcsolatrendszer vagy magas
+          piaci részesedés nem önmagában bizonyít visszaélést.
+          <a class="ref" href="#F07">[F07]</a>
+        </p>
+        <p>
+          <strong>Elemzési kérdések:</strong> kik a tényleges helyettesítők;
+          milyen belépési korlátok vannak; fennáll-e vevői ellenhatalom; ki fér
+          hozzá nélkülözhetetlen infrastruktúrához; milyen a szerződéses
+          kizárólagosság; van-e objektív indok a hozzáférés megtagadására;
+          milyen hatás várható vagy figyelhető meg a versenyben?
+        </p>
+        <p>
+          <strong>AI-feladat:</strong> kizárólagossági, felmondási,
+          árkedvezményi és hozzáférési kikötések kigyűjtése; a
+          szolgáltatásmegtagadások időrendje; összehasonlítható szerződések
+          eltérései. <strong>Korlát:</strong> a piacmeghatározás és versenyhatás
+          közgazdasági és jogi elemzés; egy nyelvi modell nem állapíthatja meg
+          pusztán levelek alapján.
+        </p>
+        <p>
+          Az állami szabályozás vagy koncessziós politika okozta piaci előny
+          esetén először azt kell tisztázni, hogy vállalkozási magatartást,
+          közhatalmi döntést, közbeszerzési szabálytalanságot, állami támogatási
+          kérdést vagy személyhez köthető bűncselekményt vizsgálunk-e. A
+          gazdaságpolitikai döntés vitathatósága nem azonos egy tisztviselő
+          büntetőjogi felelősségével. Ha közben vesztegetés, szándékos
+          vagyonkárosítás vagy hivatali visszaélés adatai merülnek fel, azok
+          külön bizonyítási szálak.
+        </p>
+        <h2 id="chapter2-h55">2.11. Pénzmosás és vagyonfelkutatás</h2>
+        <p>
+          <strong>Két külön kérdés:</strong> honnan származott a vagyon, és most
+          hol található, ki rendelkezik felette? A vagyonfelkutatáshoz nem
+          szükséges minden esetben külön pénzmosási vádat kialakítani. A
+          pénzmosás jogi vizsgálata az eredeten túl a konkrét elkövetési
+          magatartást és az ahhoz tartozó tudattartalmat is igényli.
+          <a class="ref" href="#F08">[F08, F25]</a>
+        </p>
+        <p>
+          <strong>Javasolt pénzút-nyilvántartás:</strong> összeg, pénznem,
+          könyvelési és értéknap, küldő és fogadó számla, számlatulajdonos,
+          rendelkezésre jogosult, közlemény, szerződés, tényleges szolgáltatás
+          és az adat eredete. Külön mező jelölje, ha a kedvezményezettet csak
+          feltételezzük.
+        </p>
+        <p>
+          <strong>Vizsgálati jelek:</strong> indokolatlanul sok köztes cég;
+          gyors továbbküldés; készpénzfelvétel; tulajdonosváltás; kölcsönként
+          feltüntetett kifizetés; kapcsolt ingatlanszerzés.
+          <strong>Alternatíva:</strong> dokumentált csoportfinanszírozás, valódi
+          kölcsön, likviditáskezelés vagy szokásos kereskedelmi ügylet.
+        </p>
+        <p>
+          Azonos vagyont több átutalásban látva nem szabad többször
+          visszaszerezhető vagyonként összeadni. A zárolás vagy zár alá vétel
+          nem azonos az államhoz ténylegesen visszakerült összeggel. Harmadik
+          személy jogát, jóhiszemű szerzését, terheket, tulajdoni vitát és az
+          értékmegőrzés költségét is kezelni kell. A nemzetközi és magyar
+          vagyonkezelési reformok miatt a konkrét intézkedés napján hatályos
+          szabály külön ellenőrzendő. <a class="ref" href="#F03">[F03, F26]</a>
+        </p>
+        <p>
+          <strong>AI-feladat:</strong> tranzakciók összekapcsolási javaslata,
+          tulajdonosi idővonal, vagyoneltűnési kockázatot indokoló konkrét
+          események kiemelése. <strong>Emberi döntés:</strong> a
+          vagyonbiztosítás jogalapja, szükségessége, arányossága és terjedelme.
+          Az ingatlan vagy számla automatikus lefoglalása ne legyen
+          rendszerfunkció.
+        </p>
+        <h2 id="chapter2-h61">
+          2.12. A természetes személy és a cég felelősségét külön kell
+          felépíteni
+        </h2>
+        <p>
+          A természetes személy részvétele és a jogi személlyel szemben
+          alkalmazható intézkedés nem ugyanaz a döntés. A 2001. évi CIV. törvény
+          2026-ban alkalmazandó, módosított rendszerét kell vizsgálni; nem
+          elegendő a régi összefoglaló, amely kizárólag az előnyszerzéshez
+          kötötte a magyarázatot. A 2–3. § a jogi személy érintettségének és az
+          intézkedéseknek az alapja; bizonyos esetekben önálló eljárás is
+          lehetséges. <a class="ref" href="#F27">[F27]</a>
+        </p>
+        <p>
+          <strong>Külön munkalap kell:</strong> az érintett
+          vezető/tag/alkalmazott szerepe; milyen tevékenységi körben járt el; a
+          céghez kapcsolódó érdek vagy előny; vezetői tudomás vagy felügyeleti
+          mulasztás az alkalmazandó fordulat szerint; a jogi személy saját
+          eljárási jogai; esetleges jogutódlás. A kormány nem kezelhető úgy,
+          mint egy magánvállalatként „megvádolható” általános entitás: konkrét
+          szereplőket és jogalanyokat kell azonosítani.
+        </p>
+        <p>
+          Az eltulajdonítás, fiktív számla, hamis teljesítésigazolás és
+          számviteli hiányosság külön tényállást is felvethet. Ezek kapcsolata a
+          korrupciós, vagyoni és költségvetési cselekménnyel nem oldható meg
+          azzal, hogy a rendszer minden dokumentumhoz sok Btk.-szakaszt rendel.
+          A szükséges halmazati elemzés emberi jogászi feladat.
+        </p>
+        <h2 id="chapter2-h65">
+          2.13. Közös bizonyítási mátrix – minden fontos állításhoz
+        </h2>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Mező</th>
+                <th scope="col">Mit kell rögzíteni?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Állításazonosító</td>
+                <td>Stabil azonosító, például T-014</td>
+              </tr>
+              <tr>
+                <td>Tényállítás</td>
+                <td>Egy ellenőrizhető mondat; ne jogi minősítés legyen</td>
+              </tr>
+              <tr>
+                <td>Érintett és szerep</td>
+                <td>Személy/cég, adott időben betöltött szerep</td>
+              </tr>
+              <tr>
+                <td>Bizonyítandó elem</td>
+                <td>Mely ténykérdéshez kapcsolódik?</td>
+              </tr>
+              <tr>
+                <td>Terhelő forrás</td>
+                <td>Irat-ID, oldal/bekezdés vagy hang-időkód</td>
+              </tr>
+              <tr>
+                <td>Mentő/ellentétes forrás</td>
+                <td>Ugyanolyan részletes hivatkozás</td>
+              </tr>
+              <tr>
+                <td>Eredet és felhasználhatóság</td>
+                <td>Beszerzés jogalapja, korlát, ellenőrzési állapot</td>
+              </tr>
+              <tr>
+                <td>Források függősége</td>
+                <td>
+                  Önálló megerősítés vagy ugyanannak az állításnak ismétlése?
+                </td>
+              </tr>
+              <tr>
+                <td>Alternatív magyarázat</td>
+                <td>Reális, ellenőrizhető ellenhipotézis</td>
+              </tr>
+              <tr>
+                <td>Hiányzó bizonyíték</td>
+                <td>Pontosan milyen beszerzés vagy kérdés szükséges?</td>
+              </tr>
+              <tr>
+                <td>Emberi státusz</td>
+                <td>
+                  Nem ellenőrzött / részben ellenőrzött / ellenőrzött / elvetett
+                </td>
+              </tr>
+              <tr>
+                <td>Következő lépés</td>
+                <td>Felelős, határidő és jogi engedélyigény</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Nem szabad több, egymást másoló jelentést több független
+          bizonyítékként megjeleníteni. Egy sajtócikk, az arra épülő bejelentés
+          és az azt összefoglaló AI-szöveg nem három önálló megerősítés.
+        </p>
+        <h2 id="chapter2-h68">
+          2.14. Végigvezetett mintapélda: fiktív megyei informatikai tender
+        </h2>
+        <p>
+          <strong>Kitalált kiinduló helyzet:</strong> közintézmény 2,4
+          milliárdos informatikai beszerzése; három ajánlattevő; későbbi
+          szerződésmódosítás; 120 milliós tanácsadási díj egy közvetítő cégének.
+          A feljelentés szerint előre kiválasztották a nyertest.
+        </p>
+        <p>
+          <strong
+            >1. Először az ügyhatárt és az adatot kell biztosítani.</strong
+          >
+          Beszerzési azonosító, döntési időpontok, forrásfinanszírozás, érintett
+          szereplők és meglévő eljárások. Teljes ajánlati és bírálati anyag,
+          jóváhagyási nyomvonal, jogszerűen beszerezhető levelezés és
+          szolgáltatói megőrzés. Még nincs bizonyítva korrupció.
+        </p>
+        <p>
+          <strong>2. Párhuzamos hipotézisek.</strong> H1: ajánlattevői
+          egyeztetés. H2: ajánlatkérői kedvezményezés jogtalan előnyért. H3:
+          valós verseny, de gyenge beszerzési előkészítés. H4: indokolt
+          többletszolgáltatás magyarázza az árat és módosítást. Mindegyikhez
+          külön keresési terv és cáfoló adat kell.
+        </p>
+        <p>
+          <strong>3. AI előfeldolgozás.</strong> Szerződésverziók, szereplők,
+          időpontok, műszaki feltételek, levelezési szálak és pénzügyi tételek
+          strukturálása. A kimenet minden állításnál dokumentumhoz kapcsolódik.
+          Azonos vezetéknevű személyeket csak ellenőrzés után szabad összevonni.
+        </p>
+        <p>
+          <strong>4. Találat értelmezése.</strong> Egy levélben ez áll: „a másik
+          kettő tudja a számot”. Ez lehet összehangolt ajánlat jele, de lehet
+          nyilvános keretösszegre utalás. Meg kell nézni az előzményt,
+          címzetteket, csatolmányt és a benyújtott ajánlatokat. A levél első és
+          utolsó mondata közötti különbség fontosabb lehet, mint a kiemelt
+          idézet.
+        </p>
+        <p>
+          <strong>5. Pénzügyi és teljesítési ellenőrzés.</strong> A 120 milliós
+          díjhoz készült-e tényleges munka? Kinek a javára és mikor? Hová került
+          a pénz? A banki forgalom és a teljesítési dokumentum együtt
+          vizsgálandó. A díj nagysága önmagában nem bizonyít jogtalan előnyt.
+        </p>
+        <p>
+          <strong>6. Célzott kihallgatás.</strong> Ki írta a műszaki paramétert?
+          Ki ismerte az ajánlati árakat? Mi a tanácsadási anyag létrejöttének
+          ellenőrizhető nyoma? A tanú szabad előadását nem válthatja fel az AI
+          által megfogalmazott, állításokat sugalló kérdéssor.
+        </p>
+        <p>
+          <strong>7. Döntési kapu.</strong> Ha az egyeztetés bizonyítékai
+          erősek, de a vesztegetési szálhoz nincs az előny és a döntés közötti
+          kapcsolat, ezt a kettőt külön kell értékelni. Ha egy önálló cselekmény
+          teljesen feltárt, az elkülönítés jogszerűsége és célszerűsége
+          megvizsgálható. Nem szabad a cselekmények mesterséges feldarabolásával
+          a törvényi egységet, a teljes bizonyítást vagy a ne bis in idem elvét
+          megkerülni.
+        </p>
+        <p>
+          <strong>A technológia értéke ebben a példában:</strong> a kézi keresés
+          és egyeztetés egy részét elvégzi; láthatóvá teszi, mi bizonyított és
+          mi hiányzik. Nem állapítja meg, hogy ki bűnös, és nem pótolja a
+          hiányzó bizonyítékot.
+        </p>
+      </section>
+      <section id="chapter3">
+        <h1>3. AI-eszközök, adatfeldolgozás és biztonságos használat</h1>
+        <p>
+          <strong
+            >Kutatási zárónap: 2026. augusztus 30. | A termékleírások
+            ellenőrizendő gyártói állítások, nem teszteredmények.</strong
+          >
+        </p>
+        <h2 id="chapter3-h2">3.1. Milyen rendszert érdemes elképzelni?</h2>
+        <p>
+          A hasznos megoldás egy ellenőrizhető bizonyítékfeldolgozó
+          munkakörnyezet. Eredeti iratot, levelezést, pénzügyi adatot és
+          hanganyagot kezel; összekapcsolja a forrásokat; megjelöli az
+          ellenőrzendő állításokat; segít látni, mely tényállási elemhez nincs
+          még megfelelő bizonyíték. A nyelvi modell ennek egyik eleme.
+        </p>
+        <p>
+          Az „AI végigolvassa az összes iratot” önmagában nem megfelelő terv.
+          Előbb azt kell biztosítani, hogy az összes átvett adat valóban
+          bekerült, a csatolmányok nem vesztek el, a kereső nem hagy ki
+          formátumokat, a felhasználó csak jogosultan hozzáférhető adatot
+          lásson, és minden kivonat visszavezessen az eredetihez. A rendszer
+          sebességét ezért az ellenőrzött, használható megállapításig kell
+          mérni.
+        </p>
+        <p><strong>Négy egymást kiegészítő eszköztípus:</strong></p>
+        <ul>
+          <li>
+            <strong>Hagyományos adatfeldolgozás:</strong> fájlfelismerés,
+            duplikátumkezelés, OCR, táblázatos egyeztetés, dátum- és
+            számlaszám-ellenőrzés. Az összeadás és egyezésvizsgálat nem nyelvi
+            modell feladata.
+          </li>
+          <li>
+            <strong>Keresés és gépi tanulás:</strong> szó szerinti és
+            jelentésalapú keresés együtt; csoportosítás; emberi címkézésből
+            tanuló iratpriorizálás, azaz technológiával támogatott áttekintés,
+            röviden TAR.
+          </li>
+          <li>
+            <strong>Generatív AI:</strong> forráshivatkozásos kivonat,
+            eseményjelölt, ellentmondásjelölt, lehetséges kihallgatási kérdés és
+            iratvázlat.
+          </li>
+          <li>
+            <strong>Emberi bizonyítási munka:</strong> a forrás hitelessége, az
+            összefüggés, a mentő magyarázat, a személyes felelősség és a jogi
+            minősítés ellenőrzése.
+          </li>
+        </ul>
+        <h2 id="chapter3-h7">
+          3.2. Hol lehet gyorsítani? Feladatonkénti térkép
+        </h2>
+        <p>
+          Az alábbi sorrend bevezetési javaslat. A „nagy” haszon az adott
+          munkacsomagban jelenthet nagy előnyt; nem az egész nyomozás
+          automatikus rövidítését jelenti. Mért magyar eredmény nélkül
+          százalékos ígéret nem indokolt.
+        </p>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Feladat és bemenet</th>
+                <th scope="col">Javasolt támogatás, kézzelfogható kimenet</th>
+                <th scope="col">Várható haszon</th>
+                <th scope="col">Kötelező emberi ellenőrzés</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Iratbevitel, szkennelt PDF</td>
+                <td>
+                  OCR, típusfelismerés, duplikátumok és csatolmánykapcsolatok;
+                  kereshető iratjegyzék
+                </td>
+                <td>Nagy, gyakran AI nélkül is</td>
+                <td>
+                  Hiányzó oldalak, olvashatatlan iratok, darabszám-egyeztetés
+                </td>
+              </tr>
+              <tr>
+                <td>Tömeges e-mail és chat</td>
+                <td>
+                  Szálak, témák, résztvevők, célzott relevanciarangsor;
+                  ellenőrzési sor
+                </td>
+                <td>Nagy</td>
+                <td>
+                  Teljes beszélgetés, irónia, idézett szöveg, elhagyott
+                  találatok mintája
+                </td>
+              </tr>
+              <tr>
+                <td>Szerződés és módosítás</td>
+                <td>
+                  Kötelezettségek, díjak, határidők, mellékletek és
+                  verzióeltérések kinyerése
+                </td>
+                <td>Nagy</td>
+                <td>
+                  Aláírt és tervezeti változat, melléklet, feltétel, hatály
+                </td>
+              </tr>
+              <tr>
+                <td>Ajánlatok, tenderek</td>
+                <td>
+                  Azonos hibák, minták, árviszonyok, szűkítő feltételek és közös
+                  eredetre utaló adatok
+                </td>
+                <td>Közepes–nagy</td>
+                <td>
+                  Megengedett sablon, közös tanácsadó, piaci és műszaki
+                  magyarázat
+                </td>
+              </tr>
+              <tr>
+                <td>Pénzügyi kivonat, számla</td>
+                <td>
+                  Strukturált tranzakcióegyeztetés, körutalás- és
+                  időzítésjelzés; pénzúttábla
+                </td>
+                <td>Nagy, főleg adatmodellezéssel</td>
+                <td>
+                  Deviza, visszautalás, nettó/bruttó, könyvelés és teljesülés
+                  eltérése
+                </td>
+              </tr>
+              <tr>
+                <td>Hang és lehallgatás</td>
+                <td>
+                  Időbélyeges gépi leirat, keresés, beszélőszakaszok és témák
+                </td>
+                <td>Nagy, jó hangminőségnél</td>
+                <td>
+                  Lényegi részek visszahallgatása, beszélőazonosítás és
+                  bizonytalan szavak
+                </td>
+              </tr>
+              <tr>
+                <td>Tanúvallomások</td>
+                <td>
+                  Állítások eseményhez rendezése, időbeli és tartalmi eltérések
+                </td>
+                <td>Közepes–nagy</td>
+                <td>
+                  Emlékezeti bizonytalanság, kérdés megfogalmazása, közvetlen
+                  tudás vagy hallomás
+                </td>
+              </tr>
+              <tr>
+                <td>Cég- és szereplőháló</td>
+                <td>
+                  Azonosítóalapú kapcsolatépítés, időállapot; kapcsolati ábra
+                </td>
+                <td>Közepes–nagy</td>
+                <td>
+                  Névazonosság, korábbi cégnév, valódi irányítás és formális
+                  tisztség
+                </td>
+              </tr>
+              <tr>
+                <td>Szakértő előkészítése</td>
+                <td>
+                  Dokumentumjegyzék, hiánylista, célzott kérdések és
+                  ellenőrizhető adatcsomag
+                </td>
+                <td>Közepes, de kevés újramunkával nagy</td>
+                <td>
+                  A szakkérdés helyessége, összehasonlíthatóság, kirendelés
+                  tartalma
+                </td>
+              </tr>
+              <tr>
+                <td>Jogi kutatás</td>
+                <td>
+                  Hatályos és történeti jogszabály, releváns döntés keresése
+                </td>
+                <td>Közepes</td>
+                <td>Pontos időállapot, teljes döntés és eltérő tényállás</td>
+              </tr>
+              <tr>
+                <td>Vádirat-előkészítés</td>
+                <td>
+                  Ember által jóváhagyott állításokból vázlat, forrásjegyzék és
+                  hiányriasztás
+                </td>
+                <td>Közepes</td>
+                <td>
+                  Minden tény, minősítés, személyhez rendelés és hivatkozás
+                </td>
+              </tr>
+              <tr>
+                <td>Kézbesítés, külföldi végrehajtás</td>
+                <td>Határidőfigyelés, teljesebb megkeresés</td>
+                <td>Korlátozott közvetlenül</td>
+                <td>
+                  Az eljárási döntést és külső teljesítést a modell nem
+                  helyettesíti
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          <strong
+            >Elsőként a kereshető, megbízható iratállományt, a forrásos
+            idővonalat és a bizonyítási hiánylistát érdemes létrehozni.</strong
+          >
+          Ezek nemcsak az első átolvasást, hanem a későbbi kihallgatást,
+          szakértői munkát és vádiratot is segítik.
+        </p>
+        <h3 id="chapter3-h11">Magyar nyelvi és ügytípusbeli hibák</h3>
+        <p>
+          A magyar személy- és cégnevek toldalékos alakjai, ékezetvesztése,
+          rövidítései, korabeli intézménynevei és elgépelései külön tesztet
+          igényelnek. A „nem hagytam jóvá” mondatból elvesző „nem” megfordítja a
+          jelentést. Ugyanígy veszélyes a millió és milliárd, nettó és bruttó,
+          2021 és 2027, illetve „ötven” és „hetven” tévesztése. A régi fax,
+          pecsét, kézírás, képernyőkép és táblázat más minőségvizsgálatot kíván.
+        </p>
+        <p>
+          A hang beszélőszakaszokra bontása nem bizonyítja a beszélő
+          személyazonosságát. Az AI által jelzett ellentmondás sem bizonyít
+          hazugságot: lehet más időszakról, más projektről vagy eltérő kérdésről
+          szó. A célzott ellenőrzést segítő jelzés hasznos; a „hazudik” címke
+          szakmailag és jogilag nem megfelelő.
+        </p>
+        <h2 id="chapter3-h14">3.3. Hogyan nézzen ki egy AI-találat?</h2>
+        <p>
+          Egy használható találati kártya legalább az alábbiakat tartalmazza:
+        </p>
+        <ol>
+          <li>
+            <strong>Ellenőrzendő állítás:</strong> szűk, tényszerű
+            megfogalmazás; ne legyen benne automatikus bűnösségi minősítés.
+          </li>
+          <li>
+            <strong>Forrás:</strong> ügyazonosító, bizonyítékazonosító,
+            fájlverzió, oldal/bekezdés vagy hang-időkód; megnyitható eredeti és
+            pontos idézet.
+          </li>
+          <li>
+            <strong>Kontextus:</strong> előző és következő üzenet, csatolmány,
+            beszélgetés résztvevői, releváns dátumok.
+          </li>
+          <li>
+            <strong>Kapcsolódó kérdés:</strong> például előzetes
+            ajánlategyeztetés, a teljesítés valódisága, döntési jogkör vagy
+            pénzmozgás.
+          </li>
+          <li>
+            <strong>Bizonytalanság és alternatíva:</strong> hiányzó csatolmány,
+            bizonytalan személyazonosítás, jogszerű üzleti magyarázat.
+          </li>
+          <li>
+            <strong>Terhelő és mentő kapcsolatok:</strong> mindkét irányban
+            releváns adatok, azonos megjelenítési súllyal.
+          </li>
+          <li>
+            <strong>Emberi döntés:</strong> elfogadott tény, további ellenőrzés,
+            irreleváns jelzés vagy hibás találat; név, időpont és indok.
+          </li>
+          <li>
+            <strong>Feldolgozási nyom:</strong> modell- és sablonverzió,
+            keresési feltételek, feldolgozott források, eredményverzió.
+          </li>
+        </ol>
+        <p>
+          <strong>Kitalált példa:</strong> „A D-1042 e-mail melléklete a későbbi
+          nyertes ajánlat három egyedi elírását tartalmazza, a pályázati
+          felhívás előtti dátummal. Ellenőrizendő az eredeti e-mail fejléc és a
+          melléklet keletkezése. Alternatíva: korábbi jogszerű piaci konzultáció
+          vagy újrahasznált közös sablon. Következő lépés: a feladó szerepének
+          és a teljes levélszálnak az ellenőrzése.”
+        </p>
+        <p>
+          Ez alkalmas nyomozói feladatra. Az „AI szerint 94% valószínűséggel
+          kartell történt” nem helyettesíti a bizonyítást, és a modell saját
+          bizonyossági száma nem kalibrált jogi valószínűség.
+        </p>
+        <h2 id="chapter3-h19">
+          3.4. Mely létező eszközök lehetnek érdemben vizsgálhatók?
+        </h2>
+        <p>
+          Van dokumentált ügyészi alkalmazási tapasztalat: a brit Serious Fraud
+          Office 2025. februári parlamenti válasz szerint a megelőző tizenkét
+          hónapban folyamatban lévő büntetőügyekben próbált technológiával
+          támogatott iratáttekintést, a bizonyítékfeltárási kötelezettség
+          hatékonyabb teljesítésére. Ez a felhasználási irány realitását
+          alátámasztja, de nem igazol magyar nyelvi teljesítményt, meghatározott
+          megtakarítási arányt vagy minden generatív termék alkalmasságát.
+          <a class="ref" href="#F33">[F33]</a>
+        </p>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Rendszer</th>
+                <th scope="col">Mire lehet jelölt?</th>
+                <th scope="col">Amit nem szabad adottnak tekinteni</th>
+                <th scope="col">Beszerzési következtetés</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>RelativityOne és aiR for Review</td>
+                <td>
+                  Nagy iratanyag áttekintése, relevancia és vizsgálati témák,
+                  forrással támogatott indoklás; kiforrott iratkezelési
+                  környezet
+                </td>
+                <td>
+                  Magyar büntetőjogi pontosság, hatósági engedélyezettség,
+                  minden részfeldolgozás magyarországi helye
+                </td>
+                <td>
+                  Iratáttekintési próba jelöltje; külön ellenőrizendő a felhő,
+                  modellútvonal, export és hozzáférés
+                  <a class="ref" href="#F34">[F34, F35]</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Nuix Neo / Investigations</td>
+                <td>
+                  Sokféle digitális adat feldolgozása, keresése, személyek és
+                  kapcsolatok feltárása
+                </td>
+                <td>
+                  Az összes modul azonos telepíthetősége; a gyártói
+                  esettanulmányok független mérés volta
+                </td>
+                <td>
+                  Adatbeviteli és vizsgálati környezetként vizsgálandó, konkrét
+                  modulcsomaggal <a class="ref" href="#F36">[F36]</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Cellebrite Pathfinder</td>
+                <td>
+                  Jogosan megszerzett eszközadatok összekapcsolása, idővonal,
+                  kommunikáció és multimédia elemzése
+                </td>
+                <td>
+                  Hogy bármely titkosított eszköz hozzáférhető; hogy az
+                  elemzőtermék megszerzi az adatot is
+                </td>
+                <td>
+                  Digitális nyomozati csapatnak jelölt; helyi és AWS VPC
+                  lehetőséget a gyártó közöl, konkrét konfigurációt ellenőrizni
+                  kell <a class="ref" href="#F37">[F37, F38]</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Magnet AXIOM / Magnet AI, Copilot</td>
+                <td>
+                  Digitális nyomok elemzése, kommunikációs tartalom áttekintése;
+                  egyes funkciók offline használata
+                </td>
+                <td>
+                  Teljes szerződéses-bizonyítási rendszer; minden funkció
+                  offline vagy magyar nyelven azonos minőségű
+                </td>
+                <td>
+                  Eszközadatok feldolgozásánál értékelendő; a választott verziót
+                  és modult külön tesztelni kell
+                  <a class="ref" href="#F39">[F39]</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Everlaw AI</td>
+                <td>
+                  Nagy iratanyag keresése, felülvizsgálata, forráshivatkozásos
+                  összefoglaló és iratvázlat
+                </td>
+                <td>
+                  Magyar hatósági és adatvédelmi megfelelőség; a felhőhasználat
+                  automatikus elfogadhatósága
+                </td>
+                <td>
+                  Alternatív iratáttekintési próba jelöltje, szerződéses és
+                  biztonsági ellenőrzéssel <a class="ref" href="#F40">[F40]</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Wolters Kluwer Libra / Jogtár-tartalom</td>
+                <td>
+                  Magyar és uniós jogi kutatás, jogi dokumentumok
+                  feldolgozásának támogatása
+                </td>
+                <td>
+                  Nyomozati bizonyítékraktár, forenzikus adatmentés vagy
+                  validált bűnügyi minősítő rendszer
+                </td>
+                <td>
+                  Külön jogi kutatási rétegként vizsgálandó; a 2026-os magyar
+                  ajánlat és adatkezelés tisztázandó
+                  <a class="ref" href="#F41">[F41]</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          A táblázat
+          <strong
+            >előzetes piaci körkép, nem rangsor és nem beszerzési ajánlás egy
+            konkrét gyártó mellett</strong
+          >. A kutatás nem tartalmazott termékhozzáférést, magyar
+          próbafeldolgozást, referencialátogatást vagy árajánlatot. A licenc,
+          tárhely, feldolgozott adatmennyiség, felhasználó és AI-használat
+          eltérő árazási tételek lehetnek. Publikus listaárból teljes hatósági
+          költséget nem lehet megbízhatóan levezetni.
+        </p>
+        <p>
+          Nem szükséges mind a hat rendszert megvenni. A digitális adatmentés, a
+          nagy iratanyag áttekintése és a magyar jogi kutatás eltérő feladat. Az
+          első körben egy meglévő vagy beszerezhető adatfeldolgozó környezet és
+          legfeljebb két AI-megoldás összehasonlítása indokolt, azonos
+          tesztanyagon.
+        </p>
+        <h2 id="chapter3-h24">
+          3.5. Mit célszerű készen venni, és mit sajátként kialakítani?
+        </h2>
+        <p>
+          <strong>Készen használható vagy beszerezhető:</strong> bevált fájl- és
+          e-mail-feldolgozás; forenzikus munkafolyamat; jogosultságkezelt
+          iratáttekintés; OCR és beszédfelismerés; jogi tartalomszolgáltatás.
+          Ezeket saját fejlesztéssel újraépíteni rendszerint több idő, mint a
+          magyar munkafolyamatot hozzájuk illeszteni. A „készen” itt nem jelenti
+          azt, hogy ellenőrzés nélkül használhatók.
+        </p>
+        <p>
+          <strong>Saját szakmai réteg:</strong> magyar bizonyítási kártyák és
+          tényállási mátrix; az NVVH és az eljáró szervek közötti feladat- és
+          jogosultsági rend; belső adatkapcsolatok; magyar név-, összeg- és
+          időállapotkezelés; forráshivatkozásos idővonal; hiánylista;
+          minőségmérés; iratjegyzék- és vádirat-előkészítő export. A
+          legfontosabb saját érték a szakmai adatmodell és ellenőrzési folyamat,
+          nem feltétlenül egy saját nagy nyelvi modell.
+        </p>
+        <p>
+          <strong>Saját modell tanítása csak második lépés.</strong> Előbb
+          ellenőrizni kell, hogy megfelelő kereséssel, szűk feladatokkal és
+          ellenőrzött példákkal elérhető-e a cél. A tanítás új adatkezelési,
+          visszafejtési, verziózási és tesztelési terhet hoz. Ügyiratokból
+          automatikusan épülő, később más ügyekben is működő tanítóadatbázis nem
+          lehet alapbeállítás.
+        </p>
+        <h3 id="chapter3-h28">Javasolt technikai felépítés közérthetően</h3>
+        <ol>
+          <li>
+            <strong>Eredeti bizonyítékok tára.</strong> Változatlan eredetik,
+            átvételi jegyzék, hashértékek és dokumentált kezelési lánc. A hash
+            az utólagos változást segít felismerni; önmagában nem bizonyítja az
+            eredeti tartalom igazságát vagy jogszerű megszerzését.
+          </li>
+          <li>
+            <strong>Feldolgozott munkapéldány.</strong> OCR-szöveg, leirat,
+            táblázat és kinyert adatok, egyértelmű visszahivatkozással. A hibás
+            vagy kihagyott állomány külön sorban maradjon látható.
+          </li>
+          <li>
+            <strong>Kereső és adatmodell.</strong> Szó szerinti keresés a pontos
+            nevekre és számokra; jelentésalapú keresés a körülírásokra;
+            strukturált táblák a tranzakciókhoz és időállapotokhoz; kapcsolati
+            háló az ellenőrzött kapcsolatokhoz.
+          </li>
+          <li>
+            <strong>Forrásokra támaszkodó AI.</strong> A modell a jogosultan
+            elérhető iratrészletekből dolgozik, és forrást jelöl. Ezt gyakran
+            RAG-megoldásnak nevezik. Csökkentheti, de nem szünteti meg a téves
+            állítást vagy hivatkozást.
+          </li>
+          <li>
+            <strong>Emberi felülvizsgálat.</strong> Az elemző látja az eredetit,
+            elutasíthatja a jelzést, mentő adatot kapcsolhat hozzá, és új
+            feladatot adhat. Csak ellenőrzött állítás kerülhet a bizonyítási
+            mátrix elfogadott részébe.
+          </li>
+          <li>
+            <strong>Ügyészi döntési és exportfelület.</strong> Személyenként és
+            cselekményenként mutatja a tényeket, bizonyítékokat, hiányokat,
+            vitatott pontokat és irathozzáférési státuszt.
+          </li>
+        </ol>
+        <p>
+          A jogosultságot már a keresés előtt érvényesíteni kell. Ha a modell
+          elolvashatja a tiltott iratot, majd csak az idézetet rejti el, az adat
+          már kiszivároghat az összefoglalóban. Ugyanez a szabály vonatkozik a
+          jelentésalapú indexre, gyorsítótárra, naplóra és exportra is.
+        </p>
+        <h2 id="chapter3-h31">
+          3.6. Milyen magyar adatforrásokat érdemes összekapcsolni?
+        </h2>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Adatforrás</th>
+                <th scope="col">Mit adhat?</th>
+                <th scope="col">Hozzáférési vagy értelmezési korlát</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>EKR, TED, közbeszerzési hirdetmények</td>
+                <td>Eljárás, szereplők, dátum, tárgy, eredmény</td>
+                <td>
+                  A nyilvános adat nem azonos a teljes ajánlattal és a belső
+                  levelezéssel
+                </td>
+              </tr>
+              <tr>
+                <td>CoRe és nyilvános szerződések</td>
+                <td>
+                  Szerződés, módosítás, teljesítéshez kapcsolódó közzététel
+                </td>
+                <td>
+                  Lefedettséget, mellékletet, időállapotot és közzétételi hiányt
+                  ellenőrizni kell <a class="ref" href="#F43">[F43]</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Cégnyilvántartás, beszámolók</td>
+                <td>
+                  Tulajdonosi és tisztségviselői változás, pénzügyi adatok
+                </td>
+                <td>
+                  A jelenlegi állapot nem bizonyítja az elkövetéskori
+                  kapcsolatot; a beszámoló összesített
+                </td>
+              </tr>
+              <tr>
+                <td>Tényleges tulajdonosi nyilvántartás</td>
+                <td>Tulajdonosi láncok vizsgálatának támpontja</td>
+                <td>
+                  Hozzáférés és felhasználási cél kötött; az adat minősége
+                  ellenőrzendő, nem kész bizonyíték
+                  <a class="ref" href="#F42">[F42]</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Banki és számlavezetési adatok</td>
+                <td>
+                  Tényleges átutalás, kedvezményezett, időpont, további pénzút
+                </td>
+                <td>
+                  Jogszerű megkeresés szükséges; egy
+                  számlaazonosító-nyilvántartás nem teljes tranzakciótörténet
+                </td>
+              </tr>
+              <tr>
+                <td>Támogatáskezelő, MÁK, önkormányzat, állami vállalat</td>
+                <td>
+                  Jóváhagyás, kötelezettségvállalás, elszámolás, utalványozás
+                </td>
+                <td>
+                  Intézményi hozzáférés, adatátadási jogalap és teljességi
+                  ellenőrzés szükséges
+                </td>
+              </tr>
+              <tr>
+                <td>Belső iratkezelő, ERP, levelezés, eszközadat</td>
+                <td>Döntés és végrehajtás részletes története</td>
+                <td>
+                  Célhoz kötött beszerzés; védett kommunikáció, személyes és
+                  minősített adatok elkülönítése
+                </td>
+              </tr>
+              <tr>
+                <td>Kúria, bírósági határozatok, Jogtár/NJT</td>
+                <td>Jogi minősítés és értelmezés</td>
+                <td>
+                  Teljes döntés, történeti jogállapot, licenc és
+                  újrafelhasználás ellenőrzése
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Nem célszerű a teljes állami adatvagyont előre egyetlen AI-adatbázisba
+          önteni. Előbb ügyhöz vagy megfelelően meghatározott vizsgálati célhoz
+          kötött kapcsolatok kellenek. A hozzáférhető nyilvános adatok tömeges
+          összekapcsolása is járhat adatvédelmi kötelezettséggel; nyilvánosság
+          és korlátlan másodlagos felhasználhatóság nem ugyanaz.
+        </p>
+        <h2 id="chapter3-h34">3.7. Jogi és biztonsági feltételek</h2>
+        <h3 id="chapter3-h35">
+          Adatvédelem: nem elegendő egy általános GDPR-nyilatkozat
+        </h3>
+        <p>
+          Az illetékes hatóság bűnüldözési célú személyesadat-kezelésénél a
+          2016/680 irányelv, a magyar Infotv. és az ágazati eljárási szabályok
+          összefüggését kell vizsgálni. A GDPR nem egyszerűen minden
+          ügyiratkezelés alapértelmezett jogalapja. Más célú tevékenységeknél és
+          a szolgáltató saját adatkezeléseinél eltérő szabályok lehetnek
+          relevánsak. <a class="ref" href="#F28">[F28, F29]</a>
+        </p>
+        <p>
+          Bevezetés előtt adatfolyamonként kell rögzíteni a célt, jogalapot,
+          adatkezelőt, adatfeldolgozót, hozzáférőket, megőrzést és esetleges
+          harmadik országbeli adatmozgást. A szükségesség és arányosság, az
+          érzékeny adatok, a tény és vélemény elkülönítése, valamint az
+          érintetti jogokra vonatkozó különös szabályok nem oldhatók meg egy
+          „titkosított” jelöléssel.
+        </p>
+        <h3 id="chapter3-h38">
+          AI Act: funkció szerinti besorolás és a 2026-os módosítás
+        </h3>
+        <p>
+          A bizonyítékok megbízhatóságát bűnüldözésben értékelő AI az
+          AI-rendelet III. mellékletének 6. pontja alapján nagy kockázatú körbe
+          kerülhet. További érintett kategória lehet a bűnüldözési
+          profilalkotás, illetve az igazságszolgáltatás tény- és
+          jogértékelésének támogatása. Egyszerű OCR vagy kereső nem
+          automatikusan ugyanez a kategória: a rendeltetés és a döntésre
+          gyakorolt tényleges hatás számít. Az, hogy egy ügyész végül rákattint
+          a jóváhagyásra, önmagában nem szünteti meg a besorolást.
+          <a class="ref" href="#F30">[F30]</a>
+        </p>
+        <p>
+          <strong
+            >A dátumoknál már figyelembe kell venni az (EU) 2026/1744
+            módosítást.</strong
+          >
+          A III. mellékletes rendszerekre a III. fejezet 1–3. szakaszának fő
+          alkalmazási időpontja – a 6. cikk (5) bekezdése kivételével – 2027.
+          december 2.; az I. mellékletes termékeknél 2028. augusztus 2. A
+          korábbi, általánosan 2026. augusztus 2-át idéző útmutató ezért nem
+          elegendő. Más rendelkezések, különösen tilalmak, már alkalmazandók
+          lehetnek; a halasztás nem adatvédelmi vagy büntetőeljárási mentesség.
+          <a class="ref" href="#F31">[F31, F32]</a>
+        </p>
+        <p>
+          A kockázatkezelést, dokumentációt, naplózást, emberi felügyeletet,
+          megfelelőségértékelést és hatósági használatnál az alapjogi
+          hatásvizsgálatot a tervezésbe kell építeni, a konkrét kötelezettség és
+          határidő jogi ellenőrzésével. Saját néven üzembe helyezés vagy érdemi
+          módosítás szolgáltatói kötelezettségeket is keletkeztethet. A
+          beszerzés nem ruházza át automatikusan a hatóság összes felelősségét a
+          gyártóra. <a class="ref" href="#F30">[F30, F31]</a>
+        </p>
+        <p>
+          A 2026-ban módosított AI-műveltségi rendelkezés a munkatársak
+          felkészültségének fejlesztését támogató intézkedéseket kíván meg; nem
+          egyetlen kötelező vizsgapontszámot garantáltat. Az oktatásnak ki kell
+          terjednie a forrásellenőrzésre, hibákra, mentő adatok keresésére és az
+          automatizált eredmény túlértékelésére.
+          <a class="ref" href="#F31">[F31]</a>
+        </p>
+        <h3 id="chapter3-h43">Amit a projektből ki kell zárni</h3>
+        <ul>
+          <li>
+            Politikai hovatartozásból, személyiségjegyből vagy puszta kapcsolati
+            közelségből képzett bűnösségi vagy elkövetési hajlam-pontszám. A
+            kizárólag profilalkotásra vagy személyiségjegyekre épülő
+            bűnelkövetési kockázatbecslésre az AI Act külön tilalmat tartalmaz.
+            <a class="ref" href="#F30">[F30]</a>
+          </li>
+          <li>
+            Automatikus gyanúsítás, vádemelés, kényszerintézkedés vagy
+            bizonyítékselejtezés.
+          </li>
+          <li>
+            Érzelem-, arckifejezés- vagy hangalapú „hazugságvizsgáló” beépítése
+            a bizonyítékértékelésbe.
+          </li>
+          <li>
+            Hiányzó mondat, melléklet, hangrészlet vagy tény generatív pótlása.
+            Zajcsökkentett hang és képfeljavítás is külön származtatott
+            változat, nem eredeti bizonyíték.
+          </li>
+          <li>
+            Ügyirat feltöltése általános fogyasztói chatbotba pusztán azért,
+            mert a felület jelszavas.
+          </li>
+        </ul>
+        <h3 id="chapter3-h45">
+          Bizonyíthatóság, védelem és informatikai védelem
+        </h3>
+        <p>
+          <strong>Eredet és reprodukálhatóság:</strong> naplózni kell, mit vett
+          át a rendszer, miből mit hagyott ki, melyik feldolgozásból született a
+          leirat vagy találat, ki változtatta meg a címkét. A modell új verziója
+          nem írhatja felül az előző eredményt és ellenőrzési történetet.
+        </p>
+        <p>
+          <strong>Védett kommunikáció:</strong> ügyvédi és más törvényileg
+          védett adat, minősített adat, tanúvédelmi információ és szükségtelen
+          különleges adat elkülönítési rendje már a bevitel előtt szükséges. A
+          gépi szűrés segíthet, de nem elég önmagában. Téves besorolásnál
+          karantén, jogosultsági felülvizsgálat és dokumentált döntés kell; nem
+          automatikus törlés.
+        </p>
+        <p>
+          <strong>Védelem számára ellenőrizhető anyag:</strong> a Be.
+          iratmegismerési és bizonyítási szabályainak megfelelően meg kell
+          tervezni az eredetik, a felhasznált kivonatok és a releváns
+          feldolgozási információk hozzáférését. Nem állítható általánosan, hogy
+          mindig a teljes modell forráskódját át kell adni, de a „titkos
+          algoritmus találta” nem pótolhatja a tényállítást alátámasztó
+          ellenőrizhető bizonyítékot. <a class="ref" href="#F04">[F04, F15]</a>
+        </p>
+        <p>
+          <strong>Rosszindulatú irattartalom:</strong> egy e-mail szövege
+          utasíthatja a modellt adatok kiszivárogtatására vagy találatok
+          elrejtésére. Az ilyen tartalom bizonyítékként kezelendő, nem
+          végrehajtható utasításként. A feldolgozó modell alaphelyzetben ne
+          kapjon szabad internetes hozzáférést, üzenetküldést, fájltörlési jogot
+          vagy külső eszközök önálló vezérlését.
+        </p>
+        <p>
+          <strong>Felhő és helyi üzem:</strong> mindkettő lehet kockázatos vagy
+          megfelelően kialakított. Felhőnél külön vizsgálandó a tényleges
+          adatfeldolgozási hely, a modellhívás, alvállalkozó, támogatói
+          hozzáférés, napló, mentés és adattovábbítás. Helyi üzemnél a
+          frissítés, sérülékenység, adminisztrátori hozzáférés, mentés és
+          modelllicenc. Az EU-régió vagy az offline címke önmagában nem
+          megfelelőségi tanúsítvány.
+        </p>
+        <h2 id="chapter3-h51">
+          3.8. Javasolt használati szabály egy mondatban
+        </h2>
+        <p>
+          <strong
+            >Az AI ellenőrzendő állításokat és kapcsolódó eredeti forrásokat
+            ajánlhat; joghátránnyal járó döntést nem hozhat, a bizonyítási
+            hiányt nem fedheti el, és a mentő adatot ugyanúgy felszínre kell
+            segítenie, mint a terhelőt.</strong
+          >
+        </p>
+      </section>
+      <section id="chapter4">
+        <h1>4. Bevezetés, mérés és döntési terv</h1>
+        <p>
+          <strong
+            >Az alábbiak projektjavaslatok és tervezési feltételezések, nem
+            meglévő hivatali működés leírásai.</strong
+          >
+        </p>
+        <h2 id="chapter4-h2">4.1. Mitől lesz gyorsabb a teljes folyamat?</h2>
+        <p>
+          Az eszközbeszerzést öt szervezési változásnak kell kísérnie. Ezek
+          jelentős része AI nélkül is hasznos.
+        </p>
+        <p>
+          <strong>Ügyenként egy bizonyítási terv és egy felelős.</strong> Az
+          ügyész, nyomozó, pénzügyi elemző és digitális szakember ugyanazt a
+          cselekmény–személy–bizonyíték mátrixot használja. A rendszer minden
+          feladathoz kérdést, felelőst, határidőt és elkészült kimenetet
+          rendeljen. A jogszabály szerinti hatáskör és független döntési jog
+          változatlan marad.
+        </p>
+        <p>
+          <strong>A várakozást korán kell elindítani.</strong> Az elévülési,
+          adatmegőrzési és vagyonkimentési kockázat ellenőrzése után a szükséges
+          külföldi adatot és szakértői kapacitást már az első hetekben meg kell
+          célozni, ha a bizonyítási terv indokolja. Nem kell megvárni az összes
+          e-mail végigolvasását. A megkereséshez ugyanakkor elég pontos
+          ténykérdés és jogalap szükséges.
+        </p>
+        <p>
+          <strong
+            >Egyetlen ellenőrzött adatbevitel, több szakmai
+            felhasználás.</strong
+          >
+          Ugyanazt a szerződést ne öt ember OCR-ezze, nevezze át és foglalja
+          össze egymástól függetlenül. Az áttekintési címkék, bizonytalanságok
+          és hivatkozások megoszthatók az ügyön belüli jogosultságok szerint. A
+          nyomozó saját jegyzete és a bizonyíték eredetije külön maradjon.
+        </p>
+        <p>
+          <strong>Kéthetenként bizonyítási hiányvizsgálat.</strong> Melyik
+          tényállási elemhez nincs adat? Mi cáfolhatja a jelenlegi feltevést?
+          Melyik beszerzés áll? Melyik szakértői kérdés pontatlan? A jól működő
+          AI-rendszer ennek előkészítését rövidíti le.
+        </p>
+        <p>
+          <strong>Tudatos ügyterjedelem.</strong> Nagy ügyekben vizsgálandó a
+          jogszerű elkülönítés és az önállóan bizonyítható cselekmények
+          kezelése. Nem célszerű a már tisztázott, elkülöníthető részt
+          szükségtelenül a legtávolabbi külföldi pénzút végéhez kötni.
+          Ugyanakkor az összefüggések szétdarabolása, a védelem megnehezítése
+          vagy a kétszeres értékelés elfogadhatatlan. Erről az eljáró jogász
+          dönt, nem a projektvezető.
+        </p>
+        <h3 id="chapter4-h9">
+          Az együttműködés eljárási lehetőségeit is értékelni kell
+        </h3>
+        <p>
+          Az AI-n kívüli gyorsítás része lehet a Be. 407–411. § szerinti,
+          vádemelés előtti egyezség a bűnösség beismeréséről. Ez ügyészi
+          mérlegelést, önkéntes terhelti döntést, kötelező védői részvételt és
+          később bírói ellenőrzést igényel. A tényállás és jogi minősítés nem
+          alku tárgya; a terhelt által szolgáltatott bizonyíték ugyanakkor a
+          törvényi keretek között beépülhet a tényállás megállapításába.
+          Sikertelen egyeztetésnél a keletkezett anyag felhasználását korlátozó
+          szabályokat különösen gondosan kell kezelni.
+          <a class="ref" href="#F15">[F15]</a>
+        </p>
+        <p>
+          Egy együttműködő szereplő vallomása megnyithat új bizonyítási utat, de
+          az érdekeltségét és állításainak ellenőrizhetőségét is vizsgálni kell.
+          Az AI az iratokkal való összevetést segítheti; nem választhatja ki,
+          kinek milyen kedvezményt ajánljanak. A versenyjogi engedékenység és a
+          büntetőeljárási kedvezmény külön jogintézmény, ezért az egyikből nem
+          szabad automatikusan büntetlenséget ígérni a másikban.
+        </p>
+        <h3 id="chapter4-h12">Ügypriorizálás: mi kerüljön előre?</h3>
+        <p>
+          A sorrend szakmai ismérvekre épüljön: elévülés és adatvesztés
+          közelsége; folyamatban lévő károkozás; vagyon megőrizhetősége; konkrét
+          és beszerezhető bizonyíték; súly és közérdek; nemzetközi vagy
+          szakértői függőség. A politikai hovatartozás, médiavisszhang vagy
+          könnyen elérhető vádszám nem helyettesíti ezeket.
+        </p>
+        <p>
+          A portfólióban külön nézet kell az azonnali vagyonvédelmi
+          intézkedésre, a gyorsan tisztázható ügyre és a hosszabb, összetett
+          bizonyításra. Egy nehezebb ügy alacsonyabb AI-relevancia-pontszáma nem
+          indok a mellőzésére. A megszüntetés is lehet helyes szakmai eredmény,
+          ha az alapos vizsgálat nem igazolja a gyanút.
+        </p>
+        <h2 id="chapter4-h15">4.2. Az első 90 napos próba</h2>
+        <p>
+          A kilencven nap
+          <strong
+            >az előfeltételek biztosításától számított kipróbálási idő</strong
+          >, nem az új hivatal informatikájának teljes beszerzési és bevezetési
+          határideje, és nem vádemelési ígéret. Közbeszerzés, biztonsági
+          engedélyezés vagy adatátadás önállóan meghosszabbíthatja az indulást.
+        </p>
+        <h3 id="chapter4-h17">Indulási feltételek</h3>
+        <ul>
+          <li>
+            Kijelölt szakmai tulajdonos, eljárási jogi felelős, adatvédelmi és
+            információbiztonsági felelős.
+          </li>
+          <li>
+            Dokumentált hatáskör és adatkezelési jogalap a kiválasztott
+            feladatokra; a 2026-os hatálybalépési lépcsők áttekintése.
+          </li>
+          <li>
+            Szintetikus, megfelelően anonimizált vagy jogszerűen bevonható,
+            elkülönített valós tesztanyag. Az álnevesített valós ügyirat
+            továbbra is személyes adat lehet.
+          </li>
+          <li>
+            A gyártó és alvállalkozói adatkezelésének, modellhívásának,
+            naplózásának és tanítási tilalmának szerződéses és technikai
+            tisztázása.
+          </li>
+          <li>
+            Előre rögzített teszt, elfogadási feltételek, hibabejelentés és
+            leállítási jogosultság.
+          </li>
+        </ul>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Időszak</th>
+                <th scope="col">Munka</th>
+                <th scope="col">Elvárt eredmény és döntés</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1–15. nap</td>
+                <td>
+                  Jogi és biztonsági besorolás, feladatinterjúk, tesztanyag
+                  kiválasztása
+                </td>
+                <td>
+                  Engedélyezett adatfolyam, mérési terv; tiltott funkciók
+                  kizárva
+                </td>
+              </tr>
+              <tr>
+                <td>16–30. nap</td>
+                <td>
+                  Bevitel, iratjegyzék, OCR, jogosultságok, hibás fájlok
+                  rendezése
+                </td>
+                <td>
+                  Minden tétel feldolgozott vagy látható kivétellistán szerepel
+                </td>
+              </tr>
+              <tr>
+                <td>31–45. nap</td>
+                <td>
+                  Hagyományos módszerrel mért alapvonal és szakértői tesztcímkék
+                </td>
+                <td>
+                  Összehasonlítható idő- és minőségadat; elkülönített vakteszt
+                </td>
+              </tr>
+              <tr>
+                <td>46–65. nap</td>
+                <td>Legfeljebb két megoldás beállítása és próbája</td>
+                <td>
+                  Forrásos találatok, hibakategóriák, magyar nyelvi eredmények
+                </td>
+              </tr>
+              <tr>
+                <td>66–80. nap</td>
+                <td>Ellenőrzött párhuzamos próba a rendes munkával</td>
+                <td>
+                  Az AI kimenete önálló joghatást nem kap; teljes ellenőrzési
+                  idő mérve
+                </td>
+              </tr>
+              <tr>
+                <td>81–90. nap</td>
+                <td>
+                  Vakteszt, költség, biztonság és felhasználói terhelés
+                  összegzése
+                </td>
+                <td>
+                  Folytatás, szűkebb használat, javítás vagy leállítás indokolt
+                  döntéssel
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          <strong>Első három feladat:</strong> e-mail/szerződés relevancia és
+          keresés; forrásos idővonal és szereplőkapcsolat; vallomás–irat
+          eltérésjelzés. Hangfeldolgozás akkor kerüljön velük azonos körbe, ha
+          ehhez valós, jogszerű és minőségileg változatos minta, valamint
+          visszahallgatási kapacitás rendelkezésre áll. A jogi minősítés
+          automatizálását az első körből ki kell hagyni.
+        </p>
+        <h3 id="chapter4-h21">Mi legyen a tesztanyagban?</h3>
+        <p>
+          Javasolt kiindulás: 2–3 eltérő ügytípus vagy elkülönített történeti
+          ügycsomag; például közbeszerzési összejátszás, állami vállalati
+          vagyonkezelés és támogatásfelhasználás. Legyenek releváns, irreleváns,
+          kétértelmű és kifejezetten mentő dokumentumok, rossz OCR, hosszú
+          levélszálak, nem teljesült tervezetek, azonos nevű emberek,
+          névváltozások, mellékletek és különböző időállapotok.
+        </p>
+        <p>
+          A beállító és értékelő anyagot beszélgetés, forráscsomag vagy ügy
+          szerint kell elválasztani. Ha ugyanannak a levélnek a másolata mindkét
+          részben szerepel, a látszólag jó teljesítmény félrevezető. Két
+          független szakmai olvasó készítsen címkéket a kiválasztott ellenőrzési
+          mintán; az eltéréseket harmadik döntő vagy egyeztetés rendezze. Maga
+          az emberi referencia is lehet bizonytalan, ezt külön rögzíteni kell.
+        </p>
+        <h2 id="chapter4-h24">4.3. Mit mérjünk, és mit ne?</h2>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Mérőszám</th>
+                <th scope="col">Pontos jelentés</th>
+                <th scope="col">Miért szükséges?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Teljes feldolgozási lefedettség</td>
+                <td>
+                  Átvett, sikeresen olvasott, részben olvasott és hibás tétel
+                  száma/formátuma
+                </td>
+                <td>
+                  A rendszer ne tűnjön gyorsnak azáltal, hogy kihagy adatot
+                </td>
+              </tr>
+              <tr>
+                <td>Releváns iratok megtalálási aránya</td>
+                <td>
+                  Megtalált releváns / valamennyi releváns a címkézett tesztben;
+                  terhelő és mentő külön
+                </td>
+                <td>A kihagyások a bizonyítás minőségét érintik</td>
+              </tr>
+              <tr>
+                <td>Találatok hasznossága</td>
+                <td>Valóban releváns / ellenőrzésre kiemelt</td>
+                <td>A túl sok téves riasztás elviheti a megtakarítást</td>
+              </tr>
+              <tr>
+                <td>Hivatkozási helyesség</td>
+                <td>
+                  A forrás létezik, a megfelelő változat nyílik meg, és
+                  alátámasztja az állítást
+                </td>
+                <td>A hihető összefoglaló önmagában nem elég</td>
+              </tr>
+              <tr>
+                <td>Kritikus mezők pontossága</td>
+                <td>
+                  Személy, dátum, összeg, pénznem, tagadás, jogkör és
+                  forrásazonosító
+                </td>
+                <td>Egyetlen szám- vagy névhiba megfordíthatja a történetet</td>
+              </tr>
+              <tr>
+                <td>Összes emberi munkaidő</td>
+                <td>
+                  Beállítás + ellenőrzés + negatívminta + hibajavítás + export
+                </td>
+                <td>Nemcsak a modell futási ideje számít</td>
+              </tr>
+              <tr>
+                <td>Döntésig eltelt idő</td>
+                <td>Tényleges naptári idő egy meghatározott munkacsomagnál</td>
+                <td>
+                  Megkülönbözteti a kapacitásnyereséget az ügygyorsítástól
+                </td>
+              </tr>
+              <tr>
+                <td>Újramunka és jogvédelmi hiba</td>
+                <td>
+                  Ismételt feldolgozás, rossz hozzáférés, kimaradt mentő adat
+                </td>
+                <td>A gyorsítás ne későbbi eljárási költséggé változzon</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          <strong>Nem megfelelő fő mérőszám:</strong> a modell által gyanúsnak
+          nevezett személyek, a létrehozott összefoglalók vagy a beadott vádak
+          puszta száma. A vádemelésig jutó, kellően megalapozott ügyek száma
+          fontos szervezeti eredmény, de egy rövid AI-próbában ritka és
+          késleltetett esemény. A későbbi bírósági kimeneteket ügyösszetétellel
+          és eljárási idővel együtt kell követni, nem kizárólag technológiai
+          teljesítményként.
+        </p>
+        <h3 id="chapter4-h27">
+          A nem kiemelt iratok vizsgálata elengedhetetlen
+        </h3>
+        <p>
+          A kiemelt találatok átolvasása nem mondja meg, hány fontos irat maradt
+          a háttérben. Rétegzett mintavétel kell a nem kiemelt állományból:
+          külön nyelv, forrás, dátum, fájltípus, hangminőség, szereplő és
+          alacsony modellbizonyosság szerint. A ritka, de fontos mentő tényeknek
+          és közvetlen terhelő iratoknak külön ellenőrző készlet szükséges.
+        </p>
+        <p>
+          Szemléltetés: ha egy valóban véletlen, megfelelően független, 3000
+          darabos negatívmintában nulla kihagyott releváns tétel van, a gyakran
+          alkalmazott közelítés a mintázott sokaság hibaarányának 95%-os felső
+          korlátját nagyjából 3/3000 = 0,1%-ra teszi. Ez
+          <strong>nem 100%-os megtalálási arány</strong>. Egy 65 000 tételes
+          hátrahagyott állományban még e korlátnál is nagyságrendileg 65
+          releváns tétel lehetne. Függő levélmásolatok és rétegzett minták
+          esetén a számítást módosítani kell; ez nem kész mintavételi engedély.
+        </p>
+        <h3 id="chapter4-h30">Elfogadási és leállítási kapuk</h3>
+        <p>
+          <strong>Kötelező kapu:</strong> a tesztből nem hiányozhat nyomtalanul
+          adat; a felhasznált lényegi állításokhoz ellenőrzött eredeti forrás
+          kell; tiltott hozzáférés, tanításra történő jogosulatlan továbbítás
+          vagy kitalált bizonyíték nem fogadható el. Az incidens érintett
+          funkciójának használatát fel kell függeszteni és ki kell vizsgálni.
+        </p>
+        <p>
+          <strong>Minőségi kapu:</strong> a feladatban előre meghatározott
+          megtalálási arányt és kritikus hibakorlátot bizonytalansági
+          tartománnyal együtt kell értékelni. Például egy 95%-os cél lehet
+          kiinduló szervezeti tesztküszöb, de nem jogszabályi mérce, nem minden
+          részfeladatra elégséges, és nem igazolja automatikusan a nem kiemelt
+          iratok végleges elhagyását. Ha a rendszer a mentő anyagon lényegesen
+          gyengébb, a pozitív összesített átlag sem elegendő.
+        </p>
+        <p>
+          <strong>Gazdasági kapu:</strong> csak a teljes felülvizsgálatot és
+          hibajavítást is tartalmazó időnyereség számítson. Előre rögzíthető
+          például legalább 20%-os nettó munkaóra-csökkenési cél a kiválasztott
+          feladatban, minőségromlás nélkül. Ez projektcél, nem termékre
+          vonatkozó ígéret.
+        </p>
+        <p>
+          <strong>Korlátozott továbbhasználat:</strong> ha a kereső hasznos, de
+          a rangsorolás kihagy fontos iratot, a rendszer megtartható keresési
+          segédként, miközben a nem kiemelt anyag kötelező emberi áttekintése
+          megmarad. Nem csak „mindent bevezetni” vagy „mindent elvetni” döntés
+          létezik.
+        </p>
+        <h2 id="chapter4-h35">4.4. Csapat és felelősség</h2>
+        <p>
+          Egy első, több szakterületet érintő próba szemléltető kapacitásigénye
+          8–12 teljes munkaidős egyenérték lehet, részben meglévő
+          munkatársakkal. Nem feltétlenül ennyi új álláshelyet jelent. A valódi
+          igény az adatmennyiségtől, meglévő eszközöktől és a felülvizsgálat
+          mélységétől függ.
+        </p>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Szerep</th>
+                <th scope="col">Felelősség</th>
+                <th scope="col">Példabeli kapacitás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ügyészi szakmai vezetés</td>
+                <td>Bizonyítási cél, eljárási döntés, elfogadott állítások</td>
+                <td>1–2 fő</td>
+              </tr>
+              <tr>
+                <td>Nyomozói és pénzügyi elemzői csapat</td>
+                <td>Tényrekonstrukció, címkézés, találatellenőrzés</td>
+                <td>3–4 fő</td>
+              </tr>
+              <tr>
+                <td>Digitális bizonyítéki szakember</td>
+                <td>Bevitel, eredet, formátum és kezelési lánc</td>
+                <td>1 fő</td>
+              </tr>
+              <tr>
+                <td>Adat- és AI-fejlesztő</td>
+                <td>Integráció, keresés, mérés, hibakezelés</td>
+                <td>2 fő</td>
+              </tr>
+              <tr>
+                <td>Adatvédelmi és biztonsági szakértő</td>
+                <td>Jogi adatfolyam, hozzáférés, incidens és megfelelőség</td>
+                <td>Együtt 0,5–1 fő</td>
+              </tr>
+              <tr>
+                <td>Projekt- és minőségfelelős</td>
+                <td>Feladatok, időmérés, tesztjegyzőkönyv, döntési anyag</td>
+                <td>0,5–1 fő</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          A szakértői piaci értékelés, fordítás, rendszerüzemeltetés,
+          közbeszerzés és intézményi jogi támogatás ezen felül vagy más
+          szervezeti kapacitásból szükséges lehet. A fejlesztő nem válhat a jogi
+          elfogadási teszt egyedüli bírájává; a szakmai tulajdonosnak legyen
+          joga a bevezetést megtagadni.
+        </p>
+        <h2 id="chapter4-h39">
+          4.5. Költségmodell: mit kell összehasonlítani?
+        </h2>
+        <p>
+          Árajánlat nélkül felelős forintösszeg nem adható a teljes rendszerre.
+          A következő képlet viszont alkalmas összehasonlítható ajánlatkérésre:
+        </p>
+        <p>
+          <strong
+            >Teljes éves költség = licenc + adatbevitel és tárolás +
+            AI-feldolgozás + infrastruktúra + integráció + biztonság és
+            megfelelőség + emberi felülvizsgálat + képzés + támogatás + kilépés
+            és adatexport.</strong
+          >
+        </p>
+        <p>
+          Minden gyártó ugyanarra a három forgatókönyvre adjon ajánlatot: kis
+          próba; közepes éves ügyterhelés; csúcsterhelés. Rögzíteni kell a nyers
+          és feldolgozott adatmennyiséget, felhasználókat, hangórákat, egyidejű
+          feldolgozásokat, újrafuttatásokat, megőrzést és mentést. Egy olcsóbb
+          licenc drágábbá válhat, ha az OCR, index és AI-feldolgozás mind külön
+          díjas.
+        </p>
+        <p>
+          <strong>Szemléltető megtérülési számítás:</strong> a korábbi 3000 órás
+          iratáttekintés 1583 órára csökkenése 1417 óra felszabadulását
+          jelentené. Ha kizárólag a számításhoz 15 000 Ft/óra teljes
+          munkaköltséget feltételezünk, ennek kapacitásértéke 21,255 millió Ft.
+          Ez nem ellenőrzött ügyészségi bérköltség, nem készpénzes megtakarítás,
+          és még le kell vonni az adott ügyre jutó technológiai és üzemeltetési
+          költséget. Ha a felszabaduló időt más ügyben használják fel, az
+          eredmény több elvégezhető munka, nem feltétlenül kisebb költségvetés.
+        </p>
+        <p>
+          Külön értékelendő az adatvesztés vagy késedelmes vagyonbiztosítás
+          elkerülése, de a feltételezett megmentett milliárdokat nem szabad
+          bizonyíték nélkül az AI-nak tulajdonítani. Lefoglalt, zár alá vett,
+          elkobzott és ténylegesen visszatérült vagyon külön mutató.
+        </p>
+        <h2 id="chapter4-h45">4.6. Beszerzési ellenőrzőlista</h2>
+        <p>
+          Az alábbi kérdésekre bemutató helyett szerződéses választ és
+          ellenőrizhető próbát kell kérni:
+        </p>
+        <ol>
+          <li>
+            Mely funkció működik a magyar tesztállományon; mely nyelvi és
+            fájltípus-korlátokat vállalja a szolgáltató?
+          </li>
+          <li>
+            Hol történik minden egyes feldolgozási lépés, modellhívás, mentés és
+            támogatói hozzáférés? Kik az alfeldolgozók?
+          </li>
+          <li>
+            Mi tiltja és technikailag mi akadályozza az ügyiratok tanítási vagy
+            másodlagos felhasználását?
+          </li>
+          <li>
+            Megőrizhető-e az eredeti, a származtatott szöveg, a találat, a
+            modellverzió és az emberi döntés teljes kapcsolata?
+          </li>
+          <li>
+            A hozzáférési korlátozás a keresőindexre, AI-válaszra, naplóra és
+            exportra is kiterjed-e?
+          </li>
+          <li>
+            Megjelennek-e a be nem olvasott, részlegesen olvasott, titkosított
+            vagy hibás fájlok és hiányzó csatolmányok?
+          </li>
+          <li>
+            Milyen frissítés változtathatja meg az eredményeket; lehet-e verziót
+            rögzíteni és újratesztelést követelni?
+          </li>
+          <li>
+            Kié a címke, bizonyítási mátrix, elemzési napló és saját sablon?
+            Visszaadható-e mindez nyílt, dokumentált formátumban?
+          </li>
+          <li>
+            Mi történik a szerződés végén, incidensnél, szolgáltatóváltásnál és
+            a mentési megőrzés lejártakor?
+          </li>
+          <li>
+            Mely AI Act-szerepet és dokumentációt vállalja a gyártó, és mi marad
+            az intézménynél?
+          </li>
+          <li>
+            Milyen valós referencia ellenőrizhető; a bemutatott eredmény gyártói
+            állítás vagy független mérés?
+          </li>
+          <li>
+            Mennyibe kerül a teljes életciklus azonos adatmennyiségnél, nem csak
+            az első próba?
+          </li>
+        </ol>
+        <h2 id="chapter4-h48">4.7. Hat–tizenkét hónapos folytatás</h2>
+        <p>
+          <strong>4–6. hónap:</strong> csak az elfogadott funkciók kiterjesztése
+          néhány ügycsoportra; integráció a meglévő iratkezeléssel; export a
+          szakértői és ügyészi munkához; heti hibafeldolgozás. Az első
+          használati tapasztalatok alapján frissítendő a bizonyítási mátrix és
+          az oktatás.
+        </p>
+        <p>
+          <strong>7–12. hónap:</strong> több ügyre kiterjedő mérés, magyar
+          beszéd- és névfeldolgozás javítása, ügyek közötti jogszerű
+          kapcsolatkeresés külön engedélyezési renddel, beszállítói alternatíva
+          és helyreállítási próba. A rendszer teljesítményét modellfrissítés, új
+          adattípus és új ügycsoport után ismét vizsgálni kell.
+        </p>
+        <p>
+          <strong>Bővítés előfeltétele:</strong> igazolt minőség és nettó
+          időnyereség; megfelelő emberi kapacitás; fenntartható üzemeltetés;
+          rendezett jogi besorolás. A nagyobb adatbázis önmagában nem érettség.
+        </p>
+        <h2 id="chapter4-h52">4.8. Másolható belső munkalapok</h2>
+        <h3 id="chapter4-h53">A. Ügyindító lap</h3>
+        <ul>
+          <li>
+            Ügyazonosító, eljáró szerv, felelős ügyész/nyomozó, jogszabályi
+            időállapot.
+          </li>
+          <li>
+            Cselekmény, időszak, közpénzforrás, érintett szerződés vagy döntés.
+          </li>
+          <li>
+            Kiinduló állítás és forrása; mi ellenőrzött, mi hallomás vagy
+            következtetés?
+          </li>
+          <li>
+            Lehetséges minősítések és legalább egy érdemi alternatív magyarázat.
+          </li>
+          <li>
+            Elévülés, hatáskör, mentelmi vagy más eljárási akadály vizsgálata.
+          </li>
+          <li>
+            Azonnali adatmegőrzési és vagyonvédelmi feladat; jogalap és
+            döntéshozó.
+          </li>
+          <li>Hiányzó bizonyíték, beszerzési csatorna, felelős, céldátum.</li>
+        </ul>
+        <h3 id="chapter4-h55">B. AI-feldolgozási feladatlap</h3>
+        <ul>
+          <li>
+            Pontos kérdés: például „keresd az ajánlati ár előzetes egyeztetésére
+            utaló, ellenőrzendő kommunikációt”.
+          </li>
+          <li>
+            Engedélyezett iratkör, időszak, személyi kör és kizárt védett
+            állomány.
+          </li>
+          <li>
+            Elvárt válasz: állításjelölt + idézet + forrás + kontextus +
+            alternatíva + hiány.
+          </li>
+          <li>
+            Tiltott kimenet: bűnösségi pontszám, kitalált tény, személyiségalapú
+            következtetés.
+          </li>
+          <li>
+            Ellenőrző személy, időmérés, hibakategória, negatívminta terve.
+          </li>
+        </ul>
+        <h3 id="chapter4-h57">C. Vádemelés előtti technológiai ellenőrzés</h3>
+        <ul>
+          <li>
+            Minden lényegi tényállítás ember által ellenőrzött eredeti
+            bizonyítékra épül?
+          </li>
+          <li>
+            A terhelő és mentő adatokat egyaránt értékelték, a vitatott pontok
+            láthatók?
+          </li>
+          <li>
+            A gépi leirat döntő részeit visszahallgatták, a beszélőket önállóan
+            azonosították?
+          </li>
+          <li>
+            A személyek, összegek, pénznemek, dátumok és jogszabályi
+            időállapotok ellenőrzöttek?
+          </li>
+          <li>
+            A be nem olvasott állományokat és az AI által nem kiemelt iratok
+            kezelését dokumentálták?
+          </li>
+          <li>
+            Rendezett az iratmegismerés, a védett adat és a feldolgozás
+            ellenőrizhetősége?
+          </li>
+          <li>
+            A jogi döntés indoka a bizonyítékból következik, és nem a modell
+            véleményéből?
+          </li>
+        </ul>
+        <h2 id="chapter4-h59">4.9. Milyen döntés hozható meg most?</h2>
+        <p>
+          Indokolt egy szűk, ellenőrizhető, kilencvennapos próba előkészítése a
+          meglévő adat- és iratkezelési képességek felmérésével. Az első
+          jóváhagyás tárgya a bizonyítási munkafolyamat, a tesztanyag, az
+          adatbiztonsági terv és a mérési kapuk legyenek. A konkrét gyártó és a
+          nagyobb keretösszeg kiválasztása ezután következzen.
+        </p>
+        <p>
+          A következő egyeztetéshez öt adat szükséges: ügytípusok és
+          mennyiségek; meglévő rendszerek; hozzáférhető adatforrások; tényleges
+          feladatidők és várakozások; kijelölhető szakmai csapat. Ezek nélkül is
+          elindítható a módszertani tervezés, de megbízható szállítóválasztás és
+          költségvállalás nem.
+        </p>
+      </section>
+      <section id="chapter5">
+        <h1>5. Forrásjegyzék és kutatási korlátok</h1>
+        <p>
+          <strong>Ellenőrzés és lezárás: 2026. augusztus 30.</strong> A
+          hivatkozásoknál a jogszabályok elsődlegesek; indokolás, ítélkezési
+          példa, intézményi ismertető és gyártói állítás eltérő bizonyító erővel
+          bír. A szögletes zárójelben szereplő F-számok az alábbi tételekre
+          mutatnak. Az F11–F13 típusú jelölés a köztes tételeket is jelenti.
+        </p>
+        <p>
+          Az NJT és Jogtár általános hivatkozásai idővel új időállapotot
+          mutathatnak. Bevezetési döntéshez az alkalmazott szövegváltozatot és
+          az ellenőrzés dátumát külön jogi nyilvántartásban kell rögzíteni. A
+          munkában internetes szövegellenőrzés történt; a teljes weboldal- és
+          jogforrásállomány hiteles archiválása nem része a csomagnak.
+        </p>
+        <h2 id="chapter5-h3">5.1. Magyar intézmények és eljárási keret</h2>
+        <p id="F01" class="source">
+          <strong
+            >[F01] 2026. évi XXXIV. törvény az NVVH-ról – Nemzeti
+            Jogszabálytár.</strong
+          >
+          Lényeges helyek: 1–6. §, 18. §, 61–63. §. A hivatal funkciói, az
+          ügyészi jogosultság személyi feltétele, adatkezelés és lépcsőzetes
+          hatálybalépés. A kutatásban jelzett NJT-időállapot: 2026. augusztus
+          26.
+        </p>
+        <p>
+          <a href="https://njt.jog.gov.hu/jogszabaly/2026-34-00-00"
+            >Jogszabály megnyitása</a
+          >
+        </p>
+        <p id="F02" class="source">
+          <strong
+            >[F02] 2026. évi XXXIV. törvény kihirdetett szövege – Országgyűlési
+            Jogtár.</strong
+          >
+          Az alapító rendelkezések és a 63. § hatálybalépési szabályának
+          kiegészítő ellenőrzése; nem helyettesíti az egységes szerkezetű,
+          alkalmazási időponthoz kötött szöveget.
+        </p>
+        <p>
+          <a href="https://mkogy.jogtar.hu/jogszabaly?docid=A2600034.TV"
+            >Kihirdetett törvény</a
+          >
+        </p>
+        <p id="F03" class="source">
+          <strong
+            >[F03] Országgyűlés Hivatala: Elkobzás és vagyonvisszaszerzés,
+            2025/31. Infojegyzet.</strong
+          >
+          Történeti rendőrségi és uniós háttér; a 2024/1260 irányelv
+          ismertetése. Nem az új NVVH működési leírása.
+        </p>
+        <p>
+          <a
+            href="https://www.parlament.hu/documents/d/guest/infojegyzet_2025_31_elkobzas-es-vagyonvisszaszerzes"
+            >Infojegyzet</a
+          >
+        </p>
+        <p id="F04" class="source">
+          <strong
+            >[F04] 2017. évi XC. törvény a büntetőeljárásról – NJT.</strong
+          >
+          Alapelvek, ügyészi és nyomozó hatósági szerep, bizonyítás,
+          iratmegismerés, nyomozás és vádemelés. A konkrét határidők
+          ellenőrzéséhez F15 is szükséges.
+        </p>
+        <p><a href="https://njt.jog.gov.hu/jogszabaly/2017-90-00-00">Be.</a></p>
+        <p id="F05" class="source">
+          <strong>[F05] Ügyészség: Az ügyészség feladata.</strong> Általános
+          intézményi ismertető a büntetőjogi és további feladatokról. Az új NVVH
+          különös jogállását nem ebből kell levezetni.
+        </p>
+        <p>
+          <a href="https://ugyeszseg.hu/az-ugyeszsegrol/feladata/"
+            >Feladatismertető</a
+          >
+        </p>
+        <p id="F06" class="source">
+          <strong>[F06] A 2026. évi XXXIV. törvény indokolása – NJT.</strong> Az
+          új hivatal vizsgálati és büntetőeljárási szerepének jogalkotói
+          magyarázata. Indokolás, nem önálló hatáskört keletkeztető norma.
+        </p>
+        <p>
+          <a href="https://njt.jog.gov.hu/jogszabaly/2026-34-K0-00"
+            >Indokolás</a
+          >
+        </p>
+        <p id="F07" class="source">
+          <strong>[F07] 1996. évi LVII. törvény, Tpvt. – NJT.</strong> Különösen
+          11. §, 21–22. §; kartell, erőfölény és versenyfelügyeleti keret. Az
+          uniós versenyjogi párhuzamoknál az EUMSZ 101–102. cikke is releváns.
+        </p>
+        <p>
+          <a href="https://njt.jog.gov.hu/jogszabaly/1996-57-00-00">Tpvt.</a>
+        </p>
+        <p id="F08" class="source">
+          <strong>[F08] 2012. évi C. törvény, Btk. – NJT és Jogtár.</strong>
+          Különösen 290–291., 293–294., 298–299., 305., 376–377., 396., 399–400.
+          és 420. §; kapcsolódó okirati és vagyoni tényállások. A teljes
+          bekezdés és elkövetéskori szöveg ügyenként ellenőrzendő.
+        </p>
+        <p>
+          <a href="https://njt.jog.gov.hu/jogszabaly/2012-100-00-00"
+            >Btk. az NJT-ben</a
+          >
+          ·
+          <a
+            href="https://net.jogtar.hu/getpdf?docid=A1200100.TV&amp;printTitle=2012.+%C3%A9vi+C.+t%C3%B6rv%C3%A9ny"
+            >Btk. PDF</a
+          >
+        </p>
+        <p id="F09" class="source">
+          <strong>[F09] 2015. évi CXLIII. törvény, Kbt. – NJT.</strong>
+          Közbeszerzési eljárás, szerződés, kizáró okok és jogorvoslat. Az
+          ellenőrzött időállapot dátuma 2026. június 27.; ez a zárónapon elért
+          változat, nem külön állítás későbbi módosítás hiányáról.
+        </p>
+        <p>
+          <a href="https://njt.jog.gov.hu/jogszabaly/2015-143-00-00.82"
+            >Kbt., ellenőrzött változat</a
+          >
+        </p>
+        <p id="F10" class="source">
+          <strong>[F10] Integritás Hatóság: Feljelentések.</strong> A
+          feljelentési tevékenység és ügyek intézményi bemutatása. A listán
+          szereplés nem jogerős bűnösségi megállapítás.
+        </p>
+        <p>
+          <a href="https://integritashatosag.hu/ugyek/feljelentesek/"
+            >Feljelentések</a
+          >
+        </p>
+        <p id="F11" class="source">
+          <strong>[F11] Európai Ügyészség: Hungary.</strong> Az EPPO saját
+          országoldala a részvételről és a működés kinevezéshez kötött
+          indulásáról. Az országoldal és F12 napmegjelölése közötti eltérés a
+          főszövegben jelezve.
+        </p>
+        <p>
+          <a href="https://www.eppo.europa.eu/about/members/hungary_en"
+            >Magyarország az EPPO-ban</a
+          >
+        </p>
+        <p id="F12" class="source">
+          <strong>[F12] Az EU Tanácsa: Európai Ügyészség.</strong> Részvételi és
+          intézményi ismertető; a konkrét joghatásokra F13 és az EPPO alapító
+          rendelete az irányadó.
+        </p>
+        <p>
+          <a href="https://www.consilium.europa.eu/hu/policies/eppo/"
+            >Tanácsi ismertető</a
+          >
+        </p>
+        <p id="F13" class="source">
+          <strong
+            >[F13] A Bizottság (EU) 2026/1701 határozata Magyarország
+            EPPO-részvételének megerősítéséről – EUR-Lex.</strong
+          >
+          Különösen a részvétel, működés és időbeli alkalmazás szabályai. A
+          határozat megléte önmagában nem igazolja valamennyi magyar ügy
+          operatív átvételét.
+        </p>
+        <p>
+          <a
+            href="https://eur-lex.europa.eu/legal-content/HU/ALL/?uri=CELEX%3A32026D1701"
+            >Határozat és bibliográfiai adatok</a
+          >
+          ·
+          <a
+            href="https://eur-lex.europa.eu/legal-content/HU/TXT/PDF/?uri=OJ%3AL_202601701"
+            >Magyar PDF</a
+          >
+        </p>
+        <p id="F14" class="source">
+          <strong
+            >[F14] Ügyészség: Ügyészségi statisztikai tájékoztató, büntetőjogi
+            szakterület.</strong
+          >
+          Nyilvános statisztikai kiindulópont. Nem használtuk az egyes
+          feladatokra megadott becsült időtartamok igazolására; ilyen
+          feladatszintű korrupciós idősor nem állt rendelkezésre a kutatásban.
+        </p>
+        <p>
+          <a
+            href="https://ugyeszseg.hu/az-ugyeszsegrol/statisztikai-adatok/ugyeszsegi-statisztikai-tajekoztato-buntetojogi-szakterulet/"
+            >Statisztikai kiadványok</a
+          >
+        </p>
+        <p id="F15" class="source">
+          <strong
+            >[F15] Be., Jogtár PDF, a kutatáskor 2026. VIII. 26.–IX. 26. jelzett
+            időállapot.</strong
+          >
+          Különösen 189. § (6), 351–353. §, 407–411. §. Nyomozási idő,
+          hosszabbítási feltételek, iratmegismerés, szakvélemény, vagyonfeltárás
+          és egyezség. A nyomozási idő és a teljes ügykezelési idő eltérő
+          fogalom.
+        </p>
+        <p>
+          <a
+            href="https://net.jogtar.hu/getpdf?docid=A1700090.TV&amp;printTitle=2017.+%C3%A9vi+XC.+t%C3%B6rv%C3%A9ny"
+            >Be. PDF</a
+          >
+        </p>
+        <p id="F16" class="source">
+          <strong
+            >[F16] Európai Bizottság: Taking evidence in another EU
+            country.</strong
+          >
+          Európai nyomozási határozat, elismerés és végrehajtás fő határidői; a
+          kivételek miatt nem automatikus teljes ügyhatáridő.
+        </p>
+        <p>
+          <a
+            href="https://commission.europa.eu/law/cross-border-cases/judicial-cooperation/types-judicial-cooperation/taking-evidence-another-eu-country_en"
+            >Határon átnyúló bizonyítékbeszerzés</a
+          >
+        </p>
+        <p id="F17" class="source">
+          <strong
+            >[F17] Európai Bizottság: E-evidence – cross-border access to
+            electronic evidence.</strong
+          >
+          Közvetlen szolgáltatói adatközlés és megőrzés, 10 nap és kivételes 8
+          óra, indulási és készültségi információk. A gyors csatorna
+          alkalmazhatóságát az adattípus, szolgáltató, jogi feltételek és
+          működési készültség együtt határozza meg.
+        </p>
+        <p>
+          <a
+            href="https://commission.europa.eu/law/cross-border-cases/judicial-cooperation/types-judicial-cooperation/e-evidence-cross-border-access-electronic-evidence_en"
+            >Elektronikus bizonyítékcsomag</a
+          >
+        </p>
+        <h2 id="chapter5-h38">
+          5.2. Magyar bizonyítási, ítélkezési és szakhatósági támpontok
+        </h2>
+        <p id="F18" class="source">
+          <strong
+            >[F18] Kúria: Tájékoztató a Bhar.III.160/2014. számú ügyhöz.</strong
+          >
+          Hivatali visszaélés célzatának és az eredménynek az elkülönítése.
+          Egyedi ügyismertetés; a konkrét tényállási különbségekre figyelni
+          kell.
+        </p>
+        <p>
+          <a
+            href="https://kuria-birosag.hu/hu/sajto/tajekoztato-bhariii1602014-szamu-ugyhoz"
+            >Kúria-tájékoztató</a
+          >
+        </p>
+        <p id="F19" class="source">
+          <strong
+            >[F19] Kúria: Bfv.I.346/2016., hűtlen és hanyag kezelés
+            elhatárolása.</strong
+          >
+          A vagyoni hátrányhoz való tudati viszony jelentősége. Történeti
+          jogszabályi háttérrel született ügy, ezért nem a jelenlegi tényállás
+          teljes szövegének helyettesítője.
+        </p>
+        <p>
+          <a
+            href="https://kuria-birosag.hu/hu/sajto/tajekoztato-kuria-bfvi3462016-szamu-hutlen-kezeles-es-hanyag-kezeles-elhatarolasa-targyaban"
+            >Kúria-tájékoztató</a
+          >
+        </p>
+        <p id="F20" class="source">
+          <strong
+            >[F20] Kúriai Döntések – Bírósági Határozatok, 2025. október, 1699.
+            nyomtatott oldal, [23]–[30] bekezdés.</strong
+          >
+          A vagyoni hátrány, szándékosság és a hanyag kezelés sajátos feltételei
+          körében használt kiegészítő ítélkezési támpont. A folyóiratszám
+          gyűjtemény, nem egyetlen határozat.
+        </p>
+        <p>
+          <a
+            href="https://kuria-birosag.hu/sites/default/files/kuriai_dontesek/bh_oktober_1016.pdf"
+            >2025. októberi kiadvány</a
+          >
+        </p>
+        <p id="F21" class="source">
+          <strong
+            >[F21] Kúria, 152. szám alatt közölt döntés: költségvetési
+            pénzeszközök jóváhagyott céltól eltérő felhasználása.</strong
+          >
+          A forrás meghatározott rendeltetésének jelentősége.
+        </p>
+        <p>
+          <a
+            href="https://kuria-birosag.hu/hu/kuriai-dontesek/152-i-koltsegvetesbol-szarmazo-penzeszkozok-jovahagyott-celtol-eltero-felhasznalasa"
+            >Döntésismertetés</a
+          >
+        </p>
+        <p id="F22" class="source">
+          <strong
+            >[F22] Be. 7. § (5): más eljárásban hozott határozat és tényállás
+            kötőerejének hiánya.</strong
+          >
+          Az adóhatósági megállapítás és a büntetőjogi felelősség
+          elkülönítésének közvetlen eljárási jogalapja. Ugyanannak a törvénynek
+          célzott rendelkezése, amelyre F04 és F15 is hivatkozik; nem külön
+          jogforrás.
+        </p>
+        <p>
+          <a
+            href="https://net.jogtar.hu/getpdf?docid=A1700090.TV&amp;printTitle=2017.+%C3%A9vi+XC.+t%C3%B6rv%C3%A9ny"
+            >Be., célzott rendelkezés az elején</a
+          >
+        </p>
+        <p id="F23" class="source">
+          <strong
+            >[F23] Gazdasági Versenyhivatal: kartellútmutató ajánlatkérőknek és
+            közbeszerzési oktatási anyag, 2017.</strong
+          >
+          Ajánlati minták, azonos hibák, visszalépések és összejátszási
+          jelzések; a gyanújelek nem helyettesítik a bizonyítást.
+        </p>
+        <p>
+          <a
+            href="https://gvh.hu/data/cms1036313/KARTELL_ajanlatkeroknek_2017_05_24.pdf"
+            >Ajánlatkérői útmutató</a
+          >
+          ·
+          <a
+            href="https://www.gvh.hu/data/cms1036296/GVH_VKK_kiadvanyok_oktatasi_anyag_kozbesz_kartell_2017.pdf"
+            >Részletes oktatási anyag</a
+          >
+        </p>
+        <p id="F24" class="source">
+          <strong>[F24] Kúria Bfv.1124/2022/10., anonimizált határozat.</strong>
+          Árlejtés előtti SMS-kommunikáció értékelésének példája. Konkrét ügy,
+          nem önálló általános bizonyítási szabály.
+        </p>
+        <p>
+          <a
+            href="https://eakta.birosag.hu/anonimizalt-hatarozat-pdf/?azonosito=acc47e4e-f866-453d-9d0b-077ae522fc91&amp;birosagName=K%C3%BAria&amp;ugyszam=Bfv.1124%2F2022%2F10"
+            >Határozat PDF</a
+          >
+        </p>
+        <p id="F25" class="source">
+          <strong
+            >[F25] Kúriai Döntések – Bírósági Határozatok, 2023.
+            március.</strong
+          >
+          Pénzmosási szabályozáshoz kapcsolódó szakmai háttér. A kiadvány
+          tanulmányokat is tartalmaz, ezért az elemzést nem szabad automatikusan
+          kötelező döntési tételként kezelni.
+        </p>
+        <p>
+          <a
+            href="https://kuria-birosag.hu/sites/default/files/kuriai_dontesek/kuriai_dontesek_-_birosagi_hatarozatok_-_2023_marcius.pdf"
+            >2023. márciusi kiadvány</a
+          >
+        </p>
+        <p id="F26" class="source">
+          <strong>[F26] A 2025. évi CXVIII. törvény indokolása – NJT.</strong>
+          Vagyonkezelési és elkobzási reformok háttere. Indokolás; konkrét
+          intézkedéshez az érintett hatályos norma külön megkeresendő.
+        </p>
+        <p>
+          <a href="https://njt.hu/jogszabaly/2025-118-K0-00.0">Indokolás</a>
+        </p>
+        <p id="F27" class="source">
+          <strong
+            >[F27] 2001. évi CIV. törvény a jogi személlyel szemben alkalmazható
+            büntetőjogi intézkedésekről – NJT.</strong
+          >
+          Különösen 2–3. § és az önálló eljárás szabályai. A kutatás a 2026-ban
+          elérhető, módosított szövegre támaszkodott, nem a régi
+          összefoglalókra.
+        </p>
+        <p>
+          <a href="https://njt.jog.gov.hu/jogszabaly/2001-104-00-00"
+            >Jogi személyekkel szembeni intézkedések</a
+          >
+        </p>
+        <h2 id="chapter5-h59">5.3. Adatvédelem és AI-szabályozás</h2>
+        <p id="F28" class="source">
+          <strong
+            >[F28] Az Európai Parlament és a Tanács (EU) 2016/680
+            irányelve.</strong
+          >
+          Illetékes hatóságok bűnüldözési célú személyesadat-kezelése, garanciák
+          és adattovábbítás. A magyar végrehajtással és ágazati joggal együtt
+          értelmezendő.
+        </p>
+        <p>
+          <a href="https://eur-lex.europa.eu/eli/dir/2016/680/oj/eng"
+            >Bűnüldözési adatvédelmi irányelv</a
+          >
+        </p>
+        <p id="F29" class="source">
+          <strong>[F29] 2011. évi CXII. törvény, Infotv. – NJT.</strong> Magyar
+          adatvédelmi keret és bűnüldözési adatkezelési szabályok; az
+          automatikus döntés és a különleges adatok feltételei is relevánsak.
+        </p>
+        <p>
+          <a href="https://njt.jog.gov.hu/jogszabaly/2011-112-00-00">Infotv.</a>
+        </p>
+        <p id="F30" class="source">
+          <strong
+            >[F30] Az Európai Parlament és a Tanács (EU) 2024/1689 rendelete, AI
+            Act.</strong
+          >
+          Különösen 5–6., 25–27., 111. és 113. cikk, III. melléklet 6. és 8.
+          pont. Az eredeti szöveget F31 módosításával együtt kell olvasni.
+        </p>
+        <p>
+          <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+            >AI Act</a
+          >
+        </p>
+        <p id="F31" class="source">
+          <strong
+            >[F31] Az Európai Parlament és a Tanács (EU) 2026/1744
+            rendelete.</strong
+          >
+          A 2026-os AI-omnibusz módosítás; az 1. cikk módosítja többek között az
+          AI-műveltségi szabályt és a nagy kockázatú rendszerek fő alkalmazási
+          időpontjait. Az anyagban a 2027. december 2-i és 2028. augusztus 2-i
+          időpont ebből ered.
+        </p>
+        <p>
+          <a href="https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng"
+            >Módosító rendelet</a
+          >
+        </p>
+        <p id="F32" class="source">
+          <strong>[F32] Európai Bizottság: AI regulatory framework.</strong> Az
+          AI Act alkalmazási időrendjének intézményi összefoglalása. A kötelező
+          jogszöveghez F30–F31 az elsődleges.
+        </p>
+        <p>
+          <a
+            href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+            >Bizottsági AI-keretismertető</a
+          >
+        </p>
+        <h2 id="chapter5-h70">5.4. Dokumentált alkalmazás és termékforrások</h2>
+        <p id="F33" class="source">
+          <strong
+            >[F33] UK Parliament, Written Question 26405, 2025. január 27.;
+            válasz 2025. február 4.</strong
+          >
+          Serious Fraud Office, technológiával támogatott iratáttekintés próbája
+          folyamatban lévő büntetőügyekben. Kormányzati válasz, nem gyártói
+          referencia és nem ellenőrzött magyar teljesítménymérés.
+        </p>
+        <p>
+          <a
+            href="https://questions-statements.parliament.uk/written-questions/detail/2025-01-27/26405"
+            >Parlamenti kérdés és válasz</a
+          >
+        </p>
+        <p id="F34" class="source">
+          <strong>[F34] Relativity: aiR for Review.</strong> Gyártói
+          termékleírás: relevancia, vizsgálati témák és AI-támogatott
+          áttekintés.
+        </p>
+        <p>
+          <a href="https://www.relativity.com/data-solutions/air/review/"
+            >Termékoldal</a
+          >
+        </p>
+        <p id="F35" class="source">
+          <strong
+            >[F35] RelativityOne dokumentáció: aiR for Review és
+            results.</strong
+          >
+          Gyártói leírás az eredményekről, indoklásról és hivatkozásokról. A
+          tényleges jogosultságot és szolgáltatáskonfigurációt külön kell
+          ellenőrizni.
+        </p>
+        <p>
+          <a
+            href="https://help.relativity.com/RelativityOne/Content/Relativity/aiR_for_Review/aiR_for_Review.htm"
+            >Funkcióleírás</a
+          >
+          ·
+          <a
+            href="https://help.relativity.com/RelativityOne/Content/Relativity/aiR_for_Review/aiR_for_Review_results.htm"
+            >Eredmények dokumentációja</a
+          >
+        </p>
+        <p id="F36" class="source">
+          <strong>[F36] Nuix: Fraud investigations.</strong> Gyártói leírás a
+          digitális adatok feldolgozásáról és vizsgálatáról. A hivatkozott
+          esettanulmányok nem tekinthetők e kutatás saját vagy független
+          mérésének.
+        </p>
+        <p>
+          <a href="https://www.nuix.com/solutions/fraud-investigations"
+            >Nuix vizsgálati megoldások</a
+          >
+        </p>
+        <p id="F37" class="source">
+          <strong>[F37] Cellebrite: Pathfinder.</strong> Gyártói termékoldal a
+          digitális vizsgálati elemzésről, kommunikációról és multimédiáról.
+        </p>
+        <p>
+          <a href="https://cellebrite.com/en/products/pathfinder/"
+            >Pathfinder</a
+          >
+        </p>
+        <p id="F38" class="source">
+          <strong
+            >[F38] Cellebrite: AWS-szel bővített vizsgálati elemzés, 2024.
+            szeptember.</strong
+          >
+          Gyártói közlemény a helyi és felhős/VPC-lehetőségekről. A konkrét
+          2026-os szállítási konfigurációt nem helyettesíti.
+        </p>
+        <p>
+          <a
+            href="https://cellebrite.com/en/resources/press-releases/cellebrite-enhances-investigative-analytics-solution-with-amazon-web-services-aws/"
+            >Telepítési háttér</a
+          >
+        </p>
+        <p id="F39" class="source">
+          <strong
+            >[F39] Magnet Forensics: Magnet AI; Copilot az AXIOM-ban, 2025.
+            március 18.</strong
+          >
+          Gyártói funkcióleírás, beleértve offline képességeket. Nem valamennyi
+          modul offline működésének általános igazolása.
+        </p>
+        <p>
+          <a href="https://www.magnetforensics.com/magnet-ai/">Magnet AI</a> ·
+          <a
+            href="https://www.magnetforensics.com/blog/accelerating-investigations-with-ai-using-magnet-copilot-in-magnet-axiom/"
+            >Copilot és AXIOM</a
+          >
+        </p>
+        <p id="F40" class="source">
+          <strong>[F40] Everlaw: Everlaw AI és Writing Assistant.</strong>
+          Gyártói leírás az iratáttekintésről, összefoglalásról és hivatkozásos
+          írástámogatásról.
+        </p>
+        <p>
+          <a href="https://www.everlaw.com/product/everlaw-ai/">Everlaw AI</a> ·
+          <a
+            href="https://www.everlaw.com/product/everlaw-ai/writing-assistant/"
+            >Writing Assistant</a
+          >
+        </p>
+        <p id="F41" class="source">
+          <strong
+            >[F41] Wolters Kluwer: Libra, Jogtár-tartalommal, 2026. április
+            22.</strong
+          >
+          Magyar termékismertető a jogi AI-támogatásról. A konkrét ajánlat,
+          adatkezelés, jogosultság és funkciók érettsége beszerzés előtt
+          ellenőrzendő.
+        </p>
+        <p>
+          <a
+            href="https://www.wolterskluwer.com/hu-hu/expert-insights/ai-jogaszoknak-libra-wolters-kluwer-jogtar-tartalommal"
+            >Libra és Jogtár</a
+          >
+        </p>
+        <h2 id="chapter5-h89">5.5. Magyar adatforrások háttere</h2>
+        <p id="F42" class="source">
+          <strong
+            >[F42] NAV: pénzmosás-megelőzési kérdések és válaszok; a tényleges
+            tulajdonosi nyilvántartás 2021. évi XLIII. törvényi háttere.</strong
+          >
+          Hozzáférés és adatminőség megértéséhez. A NAV-nál közölt korábbi PDF
+          nem elegendő az alkalmazás napján hatályos minden eljárási feltétel
+          megállapítására.
+        </p>
+        <p>
+          <a
+            href="https://nav.gov.hu/penzmosas/kerdesek-es-valaszok/%24rppid0x1484150x112_pageNumber/2"
+            >NAV-tájékoztató</a
+          >
+          ·
+          <a
+            href="https://kny.nav.gov.hu/assets/files/2021_XLIII_t%C3%B6rv%C3%A9ny_Afad_tv.pdf"
+            >Törvényi háttér PDF</a
+          >
+        </p>
+        <p id="F43" class="source">
+          <strong>[F43] Közbeszerzési Hatóság: 2023. évi beszámoló.</strong> A
+          CoRe és közzétételi környezet történeti működésének bemutatása. Nem a
+          2026-os adatállomány teljességi tanúsítványa.
+        </p>
+        <p>
+          <a
+            href="https://kozbeszerzes.hu/media/documents/eves-beszamolo_2023.pdf"
+            >Éves beszámoló</a
+          >
+        </p>
+        <h2 id="chapter5-h94">5.6. Amit ez a kutatás nem igazolt</h2>
+        <ul>
+          <li>
+            Az NVVH valamennyi álláshelyének, hozzáférésének, informatikai
+            integrációjának és napi munkafolyamatának tényleges működését a
+            zárónapon.
+          </li>
+          <li>
+            Az EPPO magyar operatív indulásának konkrét teljesülését; a
+            részvételi döntés és az indulási feltétel külön szerepel.
+          </li>
+          <li>
+            Korrupciós ügyekre bontott magyar ügyészi feladatidőket,
+            AI-használati arányt vagy termékenkénti eredményességet.
+          </li>
+          <li>
+            A felsorolt gyártók magyar nyelvi pontosságát, hatósági
+            engedélyezettségét, aktuális ajánlati árát és teljes alvállalkozói
+            adatútját.
+          </li>
+          <li>
+            Konkrét ügy jogi minősítését, elévülését, kárösszegét vagy személyes
+            felelősségét.
+          </li>
+        </ul>
+        <p>
+          A hiányzó empirikus adatokat ezért nem pótolja látszólag pontos
+          országos megtakarítási ígéret. A számszerű példák reprodukálható
+          feltételezéseket adnak a későbbi helyi méréshez.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

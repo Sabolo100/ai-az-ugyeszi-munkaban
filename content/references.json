@@ -1,0 +1,79 @@
+[
+  {
+    "id": "R01",
+    "title": "OpenAI: Prompting.",
+    "description": "Hivatalos útmutató a kérés megfogalmazásáról. ",
+    "label": "Dokumentáció",
+    "url": "https://learn.chatgpt.com/docs/prompting"
+  },
+  {
+    "id": "R02",
+    "title": "OpenAI: Codex CLI.",
+    "description": "Hivatalos fejlesztőeszköz-dokumentáció. ",
+    "label": "Dokumentáció",
+    "url": "https://learn.chatgpt.com/docs/codex/cli"
+  },
+  {
+    "id": "R03",
+    "title": "Anthropic: Claude Code overview.",
+    "description": "Hivatalos termékdokumentáció. ",
+    "label": "Dokumentáció",
+    "url": "https://code.claude.com/docs/en/overview"
+  },
+  {
+    "id": "R04",
+    "title": "n8n: AI agents.",
+    "description": "Gyártói leírás a folyamatokról és emberi ellenőrzési pontokról. ",
+    "label": "Termékismertető",
+    "url": "https://n8n.io/ai-agents/"
+  },
+  {
+    "id": "R05",
+    "title": "Relativity: aiR.",
+    "description": "Gyártói AI-termékismertető; a részletes Review-hivatkozások az eredeti F34–F35 alatt is szerepelnek. ",
+    "label": "Termékismertető",
+    "url": "https://www.relativity.com/data-solutions/air/"
+  },
+  {
+    "id": "R06",
+    "title": "Nuix Neo Investigations.",
+    "description": "Gyártói vizsgálati megoldás. ",
+    "label": "Termékismertető",
+    "url": "https://www.nuix.com/solutions/fraud-investigations"
+  },
+  {
+    "id": "R07",
+    "title": "Libra by Wolters Kluwer, 2026. április 22.",
+    "description": "Magyar gyártói ismertető. ",
+    "label": "Libra és Jogtár",
+    "url": "https://www.wolterskluwer.com/hu-hu/expert-insights/ai-jogaszoknak-libra-wolters-kluwer-jogtar-tartalommal"
+  },
+  {
+    "id": "R08",
+    "title": "SFO, 2025. április 3.",
+    "description": "Intézményi közlemény a TAR-pilotról és üzleti tervről. ",
+    "label": "SFO: next steps",
+    "url": "https://www.gov.uk/government/news/serious-fraud-office-sets-out-next-steps-in-ambitious-plan"
+  },
+  {
+    "id": "R09",
+    "title": "SFO, 2025. február 3.",
+    "description": "Intézményi beszámoló az e-discovery felülvizsgálatáról. ",
+    "label": "SFO: initial findings",
+    "url": "https://www.gov.uk/government/news/initial-findings-of-our-e-discovery-review"
+  },
+  {
+    "id": "R10",
+    "title": "STF: 800/2023. határozat.",
+    "description": "Elsődleges intézményi dokumentum, brazil bírósági honlapon elérhető példány. ",
+    "label": "Határozat PDF",
+    "url": "https://stj.jus.br/internet_docs/biblioteca/clippinglegislacao/Res_800_2023_STF.pdf"
+  },
+  {
+    "id": "R11",
+    "title": "STF: VitórIA hivatalos bemutató, 2023. május 17.",
+    "description": "Az intézmény videója és leírása. ",
+    "label": "Bemutató",
+    "url": "https://www.youtube.com/watch?v=xuw1U1OredQ"
+  }
+]
